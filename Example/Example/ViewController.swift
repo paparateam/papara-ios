@@ -16,11 +16,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
     
-    @IBAction func sendButton(sender: AnyObject) {
+    @IBAction func sendButton(_ sender: AnyObject) {
         
-        let wallet = walletTextField.text?.stringByTrimmingCharactersInSet(.whitespaceCharacterSet())
-        let amountString = amountTextField.text?.stringByTrimmingCharactersInSet(.whitespaceCharacterSet())
-        let description = descriptionTextView.text.stringByTrimmingCharactersInSet(.whitespaceCharacterSet())
+        let wallet = walletTextField.text?.trimmingCharacters(in: .whitespaces)
+        let amountString = amountTextField.text?.trimmingCharacters(in: .whitespaces)
+        let description = descriptionTextView.text.trimmingCharacters(in: .whitespaces)
     
         if wallet?.characters.count == 0 {
             showAlertDialog("Hata", message: "Lütfen cüzdan numarası giriniz.")
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
             return
         }
         
-        let amount = Double(amountString!.stringByReplacingOccurrencesOfString(",", withString: "."))
+        let amount = Double(amountString!.replacingOccurrences(of: ",", with: "."))
         
         if amount == nil {
             showAlertDialog("Hata", message: "Geçersiz tutar girdiniz.")
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
             return
         }
         
-        Papara.sendMoney(self, wallet: wallet!, amount: amount!, description: description) { (result) in
+        Papara.sendMoney(self, wallet!, amount!, description) { (result) in
             switch result {
             case .success:
                 self.showAlertDialog("Tebrikler", message: "Ödemeniz başarıyla alındı.")
@@ -54,12 +54,12 @@ class ViewController: UIViewController {
         }
     }
     
-    func showAlertDialog(title: String, message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-        let alertAction = UIAlertAction(title: "TAMAM", style: UIAlertActionStyle.Cancel) { (_) in }
+    func showAlertDialog(_ title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "TAMAM", style: UIAlertActionStyle.cancel) { (_) in }
         alertController.addAction(alertAction)
         
-        presentViewController(alertController, animated: true, completion: nil)
+        present(alertController, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -80,22 +80,22 @@ class ViewController: UIViewController {
     // MARK: Keyboard Management
     
     func registerKeyboardNotifications() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil);
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil);
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name:NSNotification.Name.UIKeyboardWillShow, object: nil);
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil);
     }
     
-    @IBAction func hideKeyboard(sender: AnyObject) {
+    @IBAction func hideKeyboard(_ sender: AnyObject) {
         self.view.endEditing(true)
     }
     
-    func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+    func keyboardWillShow(_ notification: Notification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             self.scrollView.contentInset.bottom = keyboardSize.height
             self.scrollView.scrollIndicatorInsets.bottom = keyboardSize.height
         }
     }
     
-    func keyboardWillHide(notification: NSNotification) {
+    func keyboardWillHide(_ notification: Notification) {
         self.scrollView.contentInset.bottom = 0
         self.scrollView.scrollIndicatorInsets.bottom = 0
     }

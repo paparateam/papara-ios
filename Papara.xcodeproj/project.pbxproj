@@ -89,7 +89,7 @@
 		13FFB8961DD5B18900062F14 = {
 			isa = PBXGroup;
 			children = (
-				13FFB8C01DD5B22F00062F14 /* Source */,
+				13FFB8C01DD5B22F00062F14 /* Sources */,
 				13FFB8CB1DD5B23000062F14 /* Tests */,
 				13FFB8A11DD5B18900062F14 /* Products */,
 			);
@@ -104,7 +104,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		13FFB8C01DD5B22F00062F14 /* Source */ = {
+		13FFB8C01DD5B22F00062F14 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				13FFB8DE1DD5B4FC00062F14 /* Papara.swift */,
@@ -113,7 +113,6 @@
 				13CDC95C1DFEF50A00A3E8F3 /* Extension */,
 				13FFB8DC1DD5B2F700062F14 /* Supporting Files */,
 			);
-			name = Source;
 			path = Sources;
 			sourceTree = "<group>";
 		};
@@ -204,7 +203,7 @@
 				TargetAttributes = {
 					13FFB8BE1DD5B22F00062F14 = {
 						CreatedOnToolsVersion = 8.1;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					13FFB8C61DD5B23000062F14 = {
@@ -399,7 +398,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -420,7 +419,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobillium.paparasdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

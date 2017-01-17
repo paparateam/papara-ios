@@ -11,7 +11,7 @@ You can sign up for a Papara account at http://www.papara.com.
 
 - iOS 8.0+
 - Xcode 8.0+
-- Swift 2.3
+- Swift 3.0+
 
 ## Example
 
@@ -22,8 +22,6 @@ You need to have **Papara Sandbox iOS App** to try Example
 3. Change Example App **PaparaAppId** from config to your Papara App Id
 4. Run **Example App** in a device which have **Papara Sandbox iOS App** pre installed.
 
-
-
 ## Installation
 
 ### CocoaPods
@@ -33,7 +31,27 @@ You need to have **Papara Sandbox iOS App** to try Example
 $ gem install cocoapods
 ```
 
+### Swift 3
+
 To integrate Papara into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
+
+target '<Your Target Name>' do
+    pod 'Papara', '~> 2.0'
+end
+```
+
+### Swift 2
+
+To integrate Papara into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+**For swift 2 use version 1.0**
+
+https://github.com/paparateam/papara-ios/tree/swift2
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
@@ -43,7 +61,7 @@ use_frameworks!
 target '<Your Target Name>' do
     pod 'Papara', '~> 1.0'
 end
-```
+``` 
 
 Then, run the following command:
 
@@ -106,10 +124,10 @@ AppDelegate.swift
 
 import Papara
 
-func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 	...
     Papara.application(application, didFinishLaunchingWithOptions: launchOptions)
-    ....
+    ...
     return true
 }
 
@@ -124,14 +142,14 @@ AppDelegate.swift
 
 import Papara
 
-func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
-    let handled = Papara.application(application, handleOpenURL: url)
+func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+    let handled = Papara.application(application, handleOpen: url)
     // Add any custom logic here.
     return handled
 }
 
-func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
-    let handled = Papara.application(app, openURL: url, options: options)
+func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+    let handled = Papara.application(app, open: url, options: options)
     // Add any custom logic here.
     return handled
 }
@@ -140,9 +158,11 @@ func application(app: UIApplication, openURL url: NSURL, options: [String : AnyO
 ### Papara Send Money
 
 ```swift
+UIViewController.swift
+
 import Papara
 
-Papara.sendMoney(self, wallet: wallet, amount: amount, description: description) { (result) in
+Papara.sendMoney(self, wallet!, amount!, description) { (result) in
     switch result {
     case .success:
         // Success
@@ -152,6 +172,7 @@ Papara.sendMoney(self, wallet: wallet, amount: amount, description: description)
         // Cancel
     }
 }
+
 ```
 
 ## License
