@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'Papara'
-  s.version = '2.0.0'
+  s.version = '2.1.0'
   s.license = 'MIT'
   s.summary = 'Papara SDK'
   s.homepage = 'https://github.com/paparateam/papara-ios'
@@ -10,4 +10,8 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'Sources/*.swift'
+
+  s.resource_bundles = {
+    'Papara' => ['Assets/{*}']
+  }
 end

@@ -8,15 +8,16 @@
 
 import Foundation
 
-open class Papara {
+public class Papara {
     
-    private static let shared = Papara()
+    public typealias SendMoneyCompletion = ((_ result: Result, _ code: Int, _ message: String) -> Void)
     
-    private static let appStoreMessage = "Papara ile para gönderebilmek için Papara uygulamasını yüklemeniz gerekmetedir."
+    static let shared = Papara()
+    
     private static let appStoreUrl = URL(string: "itms-apps://itunes.apple.com/app/papara-cuzdan/id1146507477")!
     private static var paparaSchema: String {
         get {
-            return Papara.shared.sandbox ?  "papara-sandbox" : "papara"
+            return Papara.shared.sandbox ? "papara-sandbox" : "papara"
         }
     }
     
@@ -24,10 +25,10 @@ open class Papara {
     private var appId: String!
     private var sandbox = false
     
-    private var sendMoneyCompletion: ((_ result: PaparaResult) -> Void)!
+    private var sendMoneyCompletion: SendMoneyCompletion!
     
     // MARK: - SDK
-    public class func sendMoney(_ presentViewController: UIViewController, _ wallet: String, _ amount: Double, _ description: String, _ completion: @escaping (_ result: PaparaResult) -> Void) {
+    public class func sendMoney(_ presentViewController: UIViewController, _ wallet: String, _ amount: Double, _ description: String, _ completion: @escaping SendMoneyCompletion) {
         
         Papara.shared.sendMoneyCompletion = completion
         
@@ -40,10 +41,11 @@ open class Papara {
         parameters["amount"] = String(amount)
         parameters["description"] = description
         
-        openPapara(presentViewController, path: "sendMoney", params: parameters)
+        openPapara(presentViewController, path: DeepLinkHostType.sendMoney, params: parameters)
     }
     
     // MARK: - AppDelegate
+    
     public class func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) {
         Papara.shared.application = application
         
@@ -79,18 +81,37 @@ open class Papara {
         
         if url.host == DeepLinkHostType.sendMoney.rawValue {
             if let path = DeepLinkPathType(rawValue: url.path) {
+                
+                var result: Result!
                 switch path {
                 case .success:
-                    Papara.shared.sendMoneyCompletion(.success)
+                    result = .success
                 case .fail:
-                    Papara.shared.sendMoneyCompletion(.fail)
+                    result = .fail
                 case .cancel:
-                    Papara.shared.sendMoneyCompletion(.cancel)
+                    result = .cancel
                 }
+                
+                let params = url.queryItems;
+                let code = params!["code"]!.toInt()
+                let message = params!["message"]!
+                
+                Papara.shared.sendMoneyCompletion(result, code, message)
+                
                 return true
             }
         }
         return false
+    }
+    
+    // MARK: - Internal
+    
+    class func bundle() -> Bundle {
+        let bundle = Bundle(for: self)
+        if let bundleUrl = bundle.url(forResource: "Papara", withExtension: "bundle"), let podBundle = Bundle(url: bundleUrl) {
+            return podBundle
+        }
+        return bundle
     }
     
     // MARK: - Private
@@ -99,17 +120,17 @@ open class Papara {
         return Papara.shared.application != nil && Papara.shared.appId != nil
     }
     
-    private class func openPapara(_ presentViewController: UIViewController, path: String, params: [String: String]) {
+    private class func openPapara(_ presentViewController: UIViewController, path: DeepLinkHostType, params: [String: String]) {
         
         if !Papara.shared.application.canOpenURL(URL(string: paparaSchema + "://")!) {
-            let alertController = UIAlertController(title: "Papara!", message: appStoreMessage, preferredStyle: .alert)
+            let alertController = UIAlertController(title: Localization.AppNotFound.Title, message: Localization.AppNotFound.Message, preferredStyle: .alert)
             
-            let cancelAction = UIAlertAction(title: "Hayır", style: UIAlertActionStyle.default) { (cancelAction) in
-                alertController.dismiss(animated: true, completion: nil)
+            let acceptAction = UIAlertAction(title: Localization.AppNotFound.Install, style: UIAlertActionStyle.default) { (cancelAction) in
+                UIApplication.shared.openURL(appStoreUrl)
             }
             
-            let acceptAction = UIAlertAction(title: "Yükle", style: UIAlertActionStyle.default) { (cancelAction) in
-                UIApplication.shared.openURL(appStoreUrl)
+            let cancelAction = UIAlertAction(title: Localization.AppNotFound.Cancel, style: UIAlertActionStyle.default) { (cancelAction) in
+                alertController.dismiss(animated: true, completion: nil)
             }
             
             alertController.addAction(cancelAction)
@@ -119,9 +140,9 @@ open class Papara {
             return
         }
         
-        Papara.shared.application.openURL(createURL(path, params: params))
+        Papara.shared.application.openURL(createURL(path.rawValue, params: params))
     }
-
+    
     
     private class func createURL(_ path: String, params: [String: String]) -> URL {
         let scheme = paparaSchema + "://"
@@ -138,14 +159,15 @@ open class Papara {
         parameters["osVersion"] = UIDevice.current.systemVersion
         parameters["brand"] = "Apple"
         parameters["model"] = UIDevice.current.modelName
+        parameters["language"] = Locale.current.languageCode
         
         for (key, value) in parameters {
             queryItems.append(URLQueryItem(name: key, value: value))
-            print("\(key): \(value)")
         }
         
         urlComp.queryItems = queryItems
         
         return urlComp.url!
     }
+    
 }

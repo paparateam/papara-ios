@@ -162,7 +162,7 @@ UIViewController.swift
 
 import Papara
 
-Papara.sendMoney(self, wallet!, amount!, description) { (result) in
+Papara.sendMoney(self, wallet!, amount!, description) { (result, code, message) in
     switch result {
     case .success:
         // Success

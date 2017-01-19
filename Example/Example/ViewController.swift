@@ -42,14 +42,14 @@ class ViewController: UIViewController {
             return
         }
         
-        Papara.sendMoney(self, wallet!, amount!, description) { (result) in
+        Papara.sendMoney(self, wallet!, amount!, description) { (result, code, message) in
             switch result {
             case .success:
-                self.showAlertDialog("Tebrikler", message: "Ödemeniz başarıyla alındı.")
+                self.showAlertDialog("Başarılı", message: message);
             case .fail:
-                self.showAlertDialog("Hata", message: "Ödemeniz başarısız oldu.")
+                self.showAlertDialog("Hata", message: message);
             case .cancel:
-                self.showAlertDialog("Hata", message: "Ödemeyi iptal ettiniz.")
+                self.showAlertDialog("İptal", message: message);
             }
         }
     }
