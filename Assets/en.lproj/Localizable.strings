@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Papara
+
+  Created by Utku Yildirim on 19/01/2017.
+  Copyright © 2017 Mobillium. All rights reserved.
+*/
+
+"AppNotFound.Title" = "Papara";
+"AppNotFound.Message" = "To send money from Papara, you must first download the Papara app.";
+"AppNotFound.Install" = "Install";
+"AppNotFound.Cancel" = "Cancel";

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum PaparaResult {
+public enum Result {
     case success
     case cancel
     case fail

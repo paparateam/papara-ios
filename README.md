@@ -140,9 +140,11 @@ func application(app: UIApplication, openURL url: NSURL, options: [String : AnyO
 ### Papara Send Money
 
 ```swift
+UIViewController.swift
+
 import Papara
 
-Papara.sendMoney(self, wallet: wallet, amount: amount, description: description) { (result) in
+Papara.sendMoney(self, wallet: wallet!, amount: amount!, description: description) { (result, code, message) in
     switch result {
     case .success:
         // Success
