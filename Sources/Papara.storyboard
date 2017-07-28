@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ödeme-->
+        <scene sceneID="2pu-jP-yA9">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="r6R-DE-8XJ" customClass="PaparaPaymentVC" customModule="Papara" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OiB-aE-m3f"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zga-HW-7Op"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wga-55-e6J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q7a-jX-J7U">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q7a-jX-J7U" firstAttribute="top" secondItem="OiB-aE-m3f" secondAttribute="bottom" id="Pou-QP-OlY"/>
+                            <constraint firstItem="q7a-jX-J7U" firstAttribute="leading" secondItem="wga-55-e6J" secondAttribute="leading" id="TqT-k3-SvW"/>
+                            <constraint firstAttribute="bottom" secondItem="q7a-jX-J7U" secondAttribute="bottom" id="VAp-nP-asg"/>
+                            <constraint firstAttribute="trailing" secondItem="q7a-jX-J7U" secondAttribute="trailing" id="jsO-AZ-CZI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ödeme" id="ZWg-3c-YxY">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="htZ-6z-B2K">
+                            <connections>
+                                <action selector="closeButtonClick:" destination="r6R-DE-8XJ" id="ehb-JE-Kli"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="closeButton" destination="htZ-6z-B2K" id="sbs-Ec-chR"/>
+                        <outlet property="webView" destination="q7a-jX-J7U" id="k3q-Uw-Kqu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c3Q-sy-yG8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="149.77511244377811"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xrw-pO-uar">
+            <objects>
+                <navigationController storyboardIdentifier="PaparaNC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8fN-oj-KXc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cfa-Xv-yU6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="r6R-DE-8XJ" kind="relationship" relationship="rootViewController" id="4GO-Va-ngG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f9a-g9-GYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7.2000000000000002" y="149.77511244377811"/>
+        </scene>
+    </scenes>
+</document>

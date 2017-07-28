@@ -1,18 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lOU-U1-OJS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lOU-U1-OJS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Papara SDK Example-->
+        <!--Papara SDK Papara Numarası-->
+        <scene sceneID="B9C-0A-d0K">
+            <objects>
+                <viewController id="5ms-QM-CRx" customClass="PaparaNumberVC" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h5M-yh-G2C"/>
+                        <viewControllerLayoutGuide type="bottom" id="VP3-eH-Exh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Zs-qQ-b7o">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Papara Numarası" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSi-5Z-Pnx">
+                                <rect key="frame" x="20" y="20" width="335" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Papara Numarası Bilinmiyor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFJ-6B-YML">
+                                <rect key="frame" x="20" y="44.5" width="335" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uQ-wM-MxP" customClass="GradientButton" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="20" y="84" width="335" height="48"/>
+                                <color key="backgroundColor" red="0.84313725490000002" green="0.25882352939999997" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="eWt-2B-rpD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="PAPARA NUMARASINI AL">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="paparaNumberButtonClick:" destination="5ms-QM-CRx" eventType="touchUpInside" id="sA1-g4-6ph"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dFJ-6B-YML" secondAttribute="trailing" constant="20" id="Kuf-V4-Mic"/>
+                            <constraint firstAttribute="trailing" secondItem="7uQ-wM-MxP" secondAttribute="trailing" constant="20" id="LQY-FN-4Tg"/>
+                            <constraint firstAttribute="trailing" secondItem="aSi-5Z-Pnx" secondAttribute="trailing" constant="20" id="MeL-lM-Ppd"/>
+                            <constraint firstItem="aSi-5Z-Pnx" firstAttribute="leading" secondItem="2Zs-qQ-b7o" secondAttribute="leading" constant="20" id="OK3-5I-HJW"/>
+                            <constraint firstItem="aSi-5Z-Pnx" firstAttribute="top" secondItem="h5M-yh-G2C" secondAttribute="bottom" constant="20" id="TeL-f5-o0B"/>
+                            <constraint firstItem="dFJ-6B-YML" firstAttribute="top" secondItem="aSi-5Z-Pnx" secondAttribute="bottom" constant="10" id="XOD-EC-qUn"/>
+                            <constraint firstItem="7uQ-wM-MxP" firstAttribute="top" secondItem="dFJ-6B-YML" secondAttribute="bottom" constant="20" id="iY7-ou-hNZ"/>
+                            <constraint firstItem="dFJ-6B-YML" firstAttribute="leading" secondItem="2Zs-qQ-b7o" secondAttribute="leading" constant="20" id="uZI-eU-D1Z"/>
+                            <constraint firstItem="7uQ-wM-MxP" firstAttribute="leading" secondItem="2Zs-qQ-b7o" secondAttribute="leading" constant="20" id="vFS-RN-1I3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Papara SDK Papara Numarası" id="PvA-b8-i8k"/>
+                    <connections>
+                        <outlet property="paparaNumberLabel" destination="dFJ-6B-YML" id="vnh-px-DhV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PD8-Vt-Tcp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055" y="0.0"/>
+        </scene>
+        <!--Papara SDK Para Gönder-->
         <scene sceneID="ajA-VW-pas">
             <objects>
-                <viewController id="AoL-n0-QLS" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AoL-n0-QLS" customClass="PaparaSendMoneyVC" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mh4-cZ-EyY"/>
                         <viewControllerLayoutGuide type="bottom" id="Ugf-wT-3fR"/>
@@ -24,50 +85,35 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="saS-ng-NEM">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cüzdan Numarası" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ry-wc-KHq">
-                                        <rect key="frame" x="25" y="20" width="100" height="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Papara Numarası" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ry-wc-KHq">
+                                        <rect key="frame" x="25" y="80" width="96" height="15"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Örn: PL0123456789" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CX4-x5-q9p">
-                                        <rect key="frame" x="20" y="39" width="335" height="40"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Örn: 0123456789" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CX4-x5-q9p">
+                                        <rect key="frame" x="20" y="99" width="335" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="m6p-Ds-lRk"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tutar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYZ-dK-rpz">
-                                        <rect key="frame" x="25" y="89" width="30" height="15"/>
+                                        <rect key="frame" x="25" y="149" width="30" height="15"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Örn: 10,50 veya 10.50" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VI4-BU-Yjn">
-                                        <rect key="frame" x="20" y="108" width="335" height="40"/>
+                                        <rect key="frame" x="20" y="168" width="335" height="40"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Açıklama" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGR-0w-P54">
-                                        <rect key="frame" x="25" y="158" width="51" height="15"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jNb-HD-bBe">
-                                        <rect key="frame" x="20" y="177" width="335" height="128"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="ldW-GR-6kv"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3OP-W2-PVo">
-                                        <rect key="frame" x="20" y="325" width="335" height="48"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3OP-W2-PVo" customClass="GradientButton" customModule="Example" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="228" width="335" height="48"/>
                                         <color key="backgroundColor" red="0.86274509803921573" green="0.26666666666666666" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="zEi-7z-GEF"/>
@@ -80,29 +126,42 @@
                                             <action selector="sendButton:" destination="AoL-n0-QLS" eventType="touchUpInside" id="mvb-9n-tkV"/>
                                         </connections>
                                     </button>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="31E-Ic-R1h">
+                                        <rect key="frame" x="20" y="20" width="335" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="uE3-0P-glX"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Papara Numarası"/>
+                                            <segment title="E-Posta"/>
+                                            <segment title="Telefon Numarası"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.54509812589999995" green="0.0" blue="0.63137257099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="segmentControlDidValueChange:" destination="AoL-n0-QLS" eventType="valueChanged" id="PSc-Pt-x2D"/>
+                                        </connections>
+                                    </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="3OP-W2-PVo" firstAttribute="trailing" secondItem="CX4-x5-q9p" secondAttribute="trailing" id="19X-zT-JTv"/>
-                                    <constraint firstItem="NGR-0w-P54" firstAttribute="leading" secondItem="CX4-x5-q9p" secondAttribute="leading" constant="5" id="3Qk-i9-aC5"/>
-                                    <constraint firstItem="jNb-HD-bBe" firstAttribute="leading" secondItem="CX4-x5-q9p" secondAttribute="leading" id="4YO-VB-VpX"/>
+                                    <constraint firstItem="3OP-W2-PVo" firstAttribute="top" secondItem="VI4-BU-Yjn" secondAttribute="bottom" constant="20" id="1un-D0-dM5"/>
                                     <constraint firstItem="VI4-BU-Yjn" firstAttribute="top" secondItem="OYZ-dK-rpz" secondAttribute="bottom" constant="4" id="4h4-HD-qg8"/>
                                     <constraint firstItem="VI4-BU-Yjn" firstAttribute="leading" secondItem="CX4-x5-q9p" secondAttribute="leading" id="5wx-aL-IKW"/>
                                     <constraint firstItem="3OP-W2-PVo" firstAttribute="leading" secondItem="CX4-x5-q9p" secondAttribute="leading" id="6Cx-et-VF3"/>
-                                    <constraint firstItem="3OP-W2-PVo" firstAttribute="top" secondItem="jNb-HD-bBe" secondAttribute="bottom" constant="20" id="8C2-a9-rLc"/>
+                                    <constraint firstAttribute="trailing" secondItem="31E-Ic-R1h" secondAttribute="trailing" constant="20" id="8KV-Xv-VRb"/>
                                     <constraint firstItem="OYZ-dK-rpz" firstAttribute="top" secondItem="CX4-x5-q9p" secondAttribute="bottom" constant="10" id="9QB-bU-41t"/>
                                     <constraint firstAttribute="bottom" secondItem="3OP-W2-PVo" secondAttribute="bottom" constant="40" id="DGQ-ib-R9m"/>
                                     <constraint firstItem="VI4-BU-Yjn" firstAttribute="trailing" secondItem="CX4-x5-q9p" secondAttribute="trailing" id="DyX-RF-hwC"/>
-                                    <constraint firstItem="jNb-HD-bBe" firstAttribute="trailing" secondItem="CX4-x5-q9p" secondAttribute="trailing" id="GZh-8d-kd8"/>
                                     <constraint firstAttribute="trailing" secondItem="CX4-x5-q9p" secondAttribute="trailing" constant="20" id="GtR-Uc-hWG"/>
+                                    <constraint firstItem="31E-Ic-R1h" firstAttribute="leading" secondItem="saS-ng-NEM" secondAttribute="leading" constant="20" id="LcJ-l0-3K5"/>
                                     <constraint firstItem="3Ry-wc-KHq" firstAttribute="leading" secondItem="CX4-x5-q9p" secondAttribute="leading" constant="5" id="aNq-Ra-kNl"/>
-                                    <constraint firstItem="3Ry-wc-KHq" firstAttribute="top" secondItem="saS-ng-NEM" secondAttribute="top" constant="20" id="duK-9q-NIx"/>
-                                    <constraint firstItem="NGR-0w-P54" firstAttribute="top" secondItem="VI4-BU-Yjn" secondAttribute="bottom" constant="10" id="e2S-sc-DGi"/>
+                                    <constraint firstItem="31E-Ic-R1h" firstAttribute="top" secondItem="saS-ng-NEM" secondAttribute="top" constant="20" id="bwr-xz-Gji"/>
                                     <constraint firstItem="CX4-x5-q9p" firstAttribute="leading" secondItem="saS-ng-NEM" secondAttribute="leading" constant="20" id="iVr-U2-iCU"/>
                                     <constraint firstItem="CX4-x5-q9p" firstAttribute="centerX" secondItem="saS-ng-NEM" secondAttribute="centerX" id="otc-Mr-aeg"/>
                                     <constraint firstItem="OYZ-dK-rpz" firstAttribute="leading" secondItem="VI4-BU-Yjn" secondAttribute="leading" constant="5" id="ouN-qH-GN9"/>
                                     <constraint firstItem="CX4-x5-q9p" firstAttribute="top" secondItem="3Ry-wc-KHq" secondAttribute="bottom" constant="4" id="q5x-8P-SFb"/>
-                                    <constraint firstItem="jNb-HD-bBe" firstAttribute="top" secondItem="NGR-0w-P54" secondAttribute="bottom" constant="4" id="ssD-gV-ciC"/>
+                                    <constraint firstItem="3Ry-wc-KHq" firstAttribute="top" secondItem="31E-Ic-R1h" secondAttribute="bottom" constant="20" id="tJs-Nq-UqA"/>
                                     <constraint firstItem="VI4-BU-Yjn" firstAttribute="height" secondItem="CX4-x5-q9p" secondAttribute="height" id="tmX-4v-CIp"/>
                                 </constraints>
                                 <connections>
@@ -118,12 +177,12 @@
                             <constraint firstItem="saS-ng-NEM" firstAttribute="leading" secondItem="1MD-4B-0GL" secondAttribute="leading" id="lzz-uY-aQG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Papara SDK Example" id="zOS-hF-GH3"/>
+                    <navigationItem key="navigationItem" title="Papara SDK Para Gönder" id="zOS-hF-GH3"/>
                     <connections>
                         <outlet property="amountTextField" destination="VI4-BU-Yjn" id="dOR-Ho-Mgx"/>
-                        <outlet property="descriptionTextView" destination="jNb-HD-bBe" id="YKv-jv-Za7"/>
                         <outlet property="scrollView" destination="saS-ng-NEM" id="ACK-oY-0wM"/>
                         <outlet property="walletTextField" destination="CX4-x5-q9p" id="6Ki-8m-YPm"/>
+                        <outlet property="walletTitleLabel" destination="3Ry-wc-KHq" id="4W5-We-LkI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g40-De-b1Q" sceneMemberID="firstResponder"/>
@@ -133,22 +192,161 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="319" y="0.0"/>
+            <point key="canvasLocation" x="1794" y="0.0"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Papara SDK Ödeme-->
+        <scene sceneID="fKE-Pu-TXI">
+            <objects>
+                <viewController id="omy-GO-Ijy" customClass="PaparaPayVC" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fCn-YC-5mv"/>
+                        <viewControllerLayoutGuide type="bottom" id="32d-7S-ibK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TdE-Br-eHJ">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ödeme yapılmadı." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTD-30-kuy">
+                                <rect key="frame" x="20" y="20" width="335" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tutar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7P-9D-kvH">
+                                <rect key="frame" x="25" y="47" width="30" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDa-FO-ecC" customClass="GradientButton" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="20" y="116" width="335" height="48"/>
+                                <color key="backgroundColor" red="0.86274509799999999" green="0.2666666667" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="73r-vX-oYq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="ÖDE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="payButtonClick:" destination="omy-GO-Ijy" eventType="touchUpInside" id="FrQ-qb-Wxd"/>
+                                    <action selector="sendButton:" destination="AoL-n0-QLS" eventType="touchUpInside" id="T24-le-Gvy"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Örn: 10,50 veya 10.50" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xvf-Dn-cJX">
+                                <rect key="frame" x="20" y="66" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="tbR-5S-WAP"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xvf-Dn-cJX" firstAttribute="leading" secondItem="TdE-Br-eHJ" secondAttribute="leading" constant="20" id="4ex-al-8ZK"/>
+                            <constraint firstItem="sDa-FO-ecC" firstAttribute="leading" secondItem="TdE-Br-eHJ" secondAttribute="leading" constant="20" id="BlK-xf-5Hy"/>
+                            <constraint firstItem="iTD-30-kuy" firstAttribute="top" secondItem="fCn-YC-5mv" secondAttribute="bottom" constant="20" id="EWT-LB-4zf"/>
+                            <constraint firstItem="sDa-FO-ecC" firstAttribute="top" secondItem="Xvf-Dn-cJX" secondAttribute="bottom" constant="10" id="SdA-2H-No5"/>
+                            <constraint firstAttribute="trailing" secondItem="Xvf-Dn-cJX" secondAttribute="trailing" constant="20" id="W6V-Vg-z4L"/>
+                            <constraint firstItem="iTD-30-kuy" firstAttribute="leading" secondItem="TdE-Br-eHJ" secondAttribute="leading" constant="20" id="Yah-rp-T66"/>
+                            <constraint firstItem="n7P-9D-kvH" firstAttribute="top" secondItem="iTD-30-kuy" secondAttribute="bottom" constant="10" id="Ywj-oe-Yjs"/>
+                            <constraint firstItem="n7P-9D-kvH" firstAttribute="leading" secondItem="Xvf-Dn-cJX" secondAttribute="leading" constant="5" id="ZIi-3s-Anp"/>
+                            <constraint firstAttribute="trailing" secondItem="iTD-30-kuy" secondAttribute="trailing" constant="20" id="c6b-Ub-Lqj"/>
+                            <constraint firstItem="Xvf-Dn-cJX" firstAttribute="top" secondItem="n7P-9D-kvH" secondAttribute="bottom" constant="4" id="nkC-ZF-iBT"/>
+                            <constraint firstAttribute="trailing" secondItem="sDa-FO-ecC" secondAttribute="trailing" constant="20" id="vIY-YC-1IB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Papara SDK Ödeme" id="dZO-e9-nEV"/>
+                    <connections>
+                        <outlet property="amountTextField" destination="Xvf-Dn-cJX" id="dcH-Cg-Ity"/>
+                        <outlet property="payLabel" destination="iTD-30-kuy" id="ZIj-yB-lqg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RtZ-HE-QfX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2508" y="0.0"/>
+        </scene>
+        <!--Papara SDK-->
+        <scene sceneID="vyW-kt-ofZ">
+            <objects>
+                <viewController id="Mwr-n1-hfQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zpj-dW-gXJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="a62-nv-e4a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xW3-c4-YsX">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lD1-cz-j9b" customClass="GradientButton" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="20" y="180.5" width="335" height="46"/>
+                                <color key="backgroundColor" red="0.77271497249603271" green="0.35535714030265808" blue="0.43030151724815369" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                <state key="normal" title="Papara Numarası">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="5ms-QM-CRx" kind="show" id="Gwn-dK-27s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rd4-zp-gm2" customClass="GradientButton" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="20" y="246.5" width="335" height="46"/>
+                                <color key="backgroundColor" red="0.60392156862745094" green="0.20392156862745098" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Para Gönder">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="AoL-n0-QLS" kind="show" id="WK7-sd-mc9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URm-5Q-3TL" customClass="GradientButton" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="20" y="312.5" width="335" height="46"/>
+                                <color key="backgroundColor" red="0.54509812593460083" green="0.0" blue="0.63137257099151611" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Ödeme Yap">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="omy-GO-Ijy" kind="show" id="yLC-Af-TVO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="URm-5Q-3TL" secondAttribute="trailing" constant="20" id="8qL-3b-eI9"/>
+                            <constraint firstItem="lD1-cz-j9b" firstAttribute="leading" secondItem="xW3-c4-YsX" secondAttribute="leading" constant="20" id="ATZ-qi-VXZ"/>
+                            <constraint firstItem="URm-5Q-3TL" firstAttribute="leading" secondItem="xW3-c4-YsX" secondAttribute="leading" constant="20" id="CtV-fB-vEm"/>
+                            <constraint firstItem="rd4-zp-gm2" firstAttribute="centerX" secondItem="xW3-c4-YsX" secondAttribute="centerX" id="Foo-K0-5P6"/>
+                            <constraint firstAttribute="trailing" secondItem="rd4-zp-gm2" secondAttribute="trailing" constant="20" id="Ow9-IQ-iAv"/>
+                            <constraint firstItem="rd4-zp-gm2" firstAttribute="leading" secondItem="xW3-c4-YsX" secondAttribute="leading" constant="20" id="U3r-Yt-Kpn"/>
+                            <constraint firstAttribute="trailing" secondItem="lD1-cz-j9b" secondAttribute="trailing" constant="20" id="cQo-4a-hxr"/>
+                            <constraint firstItem="rd4-zp-gm2" firstAttribute="top" secondItem="lD1-cz-j9b" secondAttribute="bottom" constant="20" id="k9g-cB-5Vv"/>
+                            <constraint firstItem="URm-5Q-3TL" firstAttribute="top" secondItem="rd4-zp-gm2" secondAttribute="bottom" constant="20" id="kYw-4h-GgP"/>
+                            <constraint firstItem="rd4-zp-gm2" firstAttribute="centerY" secondItem="xW3-c4-YsX" secondAttribute="centerY" constant="-32" id="kpk-es-Udh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Papara SDK" id="ofh-21-9aA">
+                        <barButtonItem key="backBarButtonItem" title="Geri" id="YTv-uA-NbN"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tqw-KO-948" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="220" y="0.0"/>
+        </scene>
+        <!--ExampleNC-->
         <scene sceneID="Nhu-wZ-qym">
             <objects>
-                <navigationController id="lOU-U1-OJS" sceneMemberID="viewController">
+                <navigationController id="lOU-U1-OJS" customClass="ExampleNC" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="8uj-Qk-gNj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.89411764705882346" green="0.33333333333333331" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="AoL-n0-QLS" kind="relationship" relationship="rootViewController" id="k39-qO-7sS"/>
+                        <segue destination="Mwr-n1-hfQ" kind="relationship" relationship="rootViewController" id="AJ1-Ut-VuQ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HYi-YS-xLh" userLabel="First Responder" sceneMemberID="firstResponder"/>

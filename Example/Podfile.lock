@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (4.5.0)
+  - Hue (2.0.1)
+  - ObjectMapper (2.2.8)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - Hue (~> 2.0)
+  - ObjectMapper (~> 2.2)
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  Hue: 354caec055fdc9d38b5ef33ca2e7224721843baf
+  ObjectMapper: 3d571bb5af471c779e1160828cd9ad5c4ef90958
+
+PODFILE CHECKSUM: 00142156dc51b4e45e045ee104ced481af3e79da
+
+COCOAPODS: 1.2.1

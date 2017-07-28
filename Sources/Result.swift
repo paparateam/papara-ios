@@ -8,8 +8,20 @@
 
 import Foundation
 
-public enum Result {
+public enum SendMoneyResult {
     case success
     case cancel
-    case fail
+    case fail(error: Error)
+}
+
+public enum PayResult {
+    case success(paymentId: String, referenceId: String, status: Int, amount: Double)
+    case cancel
+    case fail(error: Error)
+}
+
+public enum PaparaNumberResult {
+    case success(paparaNumber: Int64)
+    case cancel
+    case fail(error: Error)
 }

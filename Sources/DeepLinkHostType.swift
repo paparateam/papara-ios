@@ -9,7 +9,7 @@
 import Foundation
 
 enum DeepLinkHostType: String {
-    case none = ""
-    case connect = "connect"
+    case paparaNumber = "paparaNumber"
     case sendMoney = "sendMoney"
+    case pay = "pay"
 }

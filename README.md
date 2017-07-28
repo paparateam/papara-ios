@@ -9,7 +9,7 @@ You can sign up for a Papara account at http://www.papara.com.
 
 ## Requirements
 
-- iOS 8.0+
+- iOS 9.0+
 - Xcode 8.0+
 - Swift 3.0+
 
@@ -18,7 +18,7 @@ You can sign up for a Papara account at http://www.papara.com.
 You need to have **Papara Sandbox iOS App** to try Example
 
 1. Install **Papara Sandbox iOS App** from Testflight 
-2. Change Example App **Bundle Identifier** to your real app bundle identifier 
+2. Change Example App **Bundle Identifier** to your real app bundle identifier
 3. Change Example App **PaparaAppId** from config to your Papara App Id
 4. Run **Example App** in a device which have **Papara Sandbox iOS App** pre installed.
 
@@ -41,27 +41,9 @@ platform :ios, '8.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'Papara', '~> 2.0'
+    pod 'Papara', '~> 3.0'
 end
 ```
-
-### Swift 2
-
-To integrate Papara into your Xcode project using CocoaPods, specify it in your `Podfile`:
-
-**For swift 2 use version 1.0**
-
-https://github.com/paparateam/papara-ios/tree/swift2
-
-```ruby
-source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
-use_frameworks!
-
-target '<Your Target Name>' do
-    pod 'Papara', '~> 1.0'
-end
-``` 
 
 Then, run the following command:
 
@@ -82,7 +64,7 @@ You need to get app id for your application [Papara](http://www.papara.com)
 * **PaparaAppID** Will be provided by Papara
 * **PaparaSandbox** true if you want to test in sandbox environment
 * **LSApplicationQueriesSchemes** Remove papara-sandbox in production release
-* **CFBundleURLTypes** For handling returns from Papara App. Should be papara{PaparaAppID}. For example app our AppId 87826504 so CFBundleURLTypes is papara87826504
+* **CFBundleURLTypes** For handling returns from Papara App. Should be papara{PaparaAppID}. For example if your AppId is 87826504 so CFBundleURLTypes will be papara87826504
 
 
 In Xcode, secondary-click your project's .plist file and select Open As -> Source Code.
@@ -155,24 +137,104 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 }
 ```
 
-### Papara Send Money
+### Papara Account Number
 
 ```swift
 UIViewController.swift
 
 import Papara
 
-Papara.sendMoney(self, wallet!, amount!, description) { (result, code, message) in
+Papara.getPaparaNumber(self) { (result) in
     switch result {
-    case .success:
-        // Success
-    case .fail:
-		// Fail
+    case .success(let paparaNumber):
+        self.showAlertDialog("Success", message: String(paparaNumber))
+    case .fail(let error):
+        self.showAlertDialog("Error", message: error.localizedDescription)
     case .cancel:
-        // Cancel
+        self.showAlertDialog("Cancel", message: "Cancel")
     }
 }
+```
 
+### Papara Send Money
+
+#### Send to Papara Number
+
+```swift
+UIViewController.swift
+
+import Papara
+
+Papara.sendMoney(self, to: .paparaNumber(Int64(wallet)!), amount: amount!) { (result) in
+    switch result {
+    case .success:
+        self.showAlertDialog("Success", message: "Success")
+    case .fail(let error):
+        self.showAlertDialog("Fail", message: error.localizedDescription)
+    case .cancel:
+        self.showAlertDialog("Cancel", message: "Cancel")
+    }
+}
+```
+
+#### Send to Mobile Phone
+
+```swift
+UIViewController.swift
+
+import Papara
+
+Papara.sendMoney(self, to: .mobile(wallet), amount: amount!) { (result) in
+    switch result {
+    case .success:
+        self.showAlertDialog("Success", message: "Success")
+    case .fail(let error):
+        self.showAlertDialog("Fail", message: error.localizedDescription)
+    case .cancel:
+        self.showAlertDialog("Cancel", message: "Cancel")
+    }
+}
+```
+
+#### Send to Email Address
+
+```swift
+UIViewController.swift
+
+import Papara
+
+Papara.sendMoney(self, to: .email(wallet), amount: amount!) { (result) in
+    switch result {
+    case .success:
+        self.showAlertDialog("Success", message: "Success")
+    case .fail(let error):
+        self.showAlertDialog("Fail", message: error.localizedDescription)
+    case .cancel:
+        self.showAlertDialog("Cancel", message: "Cancel")
+    }
+}
+```
+
+### Papara Pay
+
+* Firstly, you need to create a payment using backend.
+* SDK needs **paymentId**, **paymentUrl** and **redirectUrl** from backend.
+
+```swift
+UIViewController.swift
+
+import Papara
+
+Papara.pay(self, paymentId: payment.id, paymentUrl: payment.paymentUrl, redirectUrl: payment.redirectUrl) { (result) in
+    switch result {
+    case .success(let paymentId, let referenceId, let status, let amount):
+        self.showAlertDialog("Success", message: "Success")
+    case .fail(let error):
+        self.showAlertDialog("Error", message: error.localizedDescription)
+    case .cancel:
+        self.showAlertDialog("Cancel", message: "Cancel")
+    }
+}
 ```
 
 ## License

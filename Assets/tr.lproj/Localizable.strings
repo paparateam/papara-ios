@@ -7,6 +7,15 @@
  */
 
 "AppNotFound.Title" = "Papara";
-"AppNotFound.Message" = "Papara'dan para gönderebilmek için Papara uygulamasını yüklemelisiniz.";
+"AppNotFound.Message.PaparaNumber" = "Papara uygulamasını yüklemelisiniz.";
+"AppNotFound.Message.SendMoney" = "Papara'dan para gönderebilmek için Papara uygulamasını yüklemelisiniz.";
+"AppNotFound.Message.Pay" = "Papara uygulamasını yüklemek istermisiniz?";
 "AppNotFound.Install" = "Yükle";
 "AppNotFound.Cancel" = "Vazgeç";
+"AppNotFound.Continue" = "Devam Et";
+
+"Error.Wrong.Email" = "Geçersiz Email";
+"Error.Wrong.PaparaNumber" = "Geçersiz Papara Numarası";
+"Error.Wrong.PhoneNumber" = "Geçersiz Telefon Numarası";
+
+"Error.Unexpected" = "Beklenmedik bir hata oluştu.";

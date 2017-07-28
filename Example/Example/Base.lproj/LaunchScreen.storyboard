@@ -1,45 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yxf-TP-qBI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="ID3-vy-xfM">
+        <scene sceneID="wrn-8B-G9q">
             <objects>
-                <viewController id="yxf-TP-qBI" sceneMemberID="viewController">
+                <viewController id="O0z-sd-bUB" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UW1-QG-GZw"/>
-                        <viewControllerLayoutGuide type="bottom" id="QRh-cg-RnT"/>
+                        <viewControllerLayoutGuide type="top" id="5KC-9k-iGX"/>
+                        <viewControllerLayoutGuide type="bottom" id="dpt-PV-Lch"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4y7-2R-5gf">
+                    <view key="view" contentMode="scaleToFill" id="1oP-EZ-r5F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="Papara Big Logo" translatesAutoresizingMaskIntoConstraints="NO" id="fVR-tj-SPu">
-                                <rect key="frame" x="94" y="301" width="187.5" height="65"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_auth_background" translatesAutoresizingMaskIntoConstraints="NO" id="RXi-qf-saO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_logo_login" translatesAutoresizingMaskIntoConstraints="NO" id="Naa-6F-o6d">
+                                <rect key="frame" x="40" y="104" width="187.5" height="89"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.89411764709999997" green="0.33333333329999998" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fVR-tj-SPu" firstAttribute="width" secondItem="4y7-2R-5gf" secondAttribute="width" multiplier="0.5" id="HAj-y6-1dE"/>
-                            <constraint firstItem="fVR-tj-SPu" firstAttribute="centerY" secondItem="4y7-2R-5gf" secondAttribute="centerY" id="RyQ-gc-NvC"/>
-                            <constraint firstItem="fVR-tj-SPu" firstAttribute="centerX" secondItem="4y7-2R-5gf" secondAttribute="centerX" id="SoQ-FB-eYW"/>
+                            <constraint firstAttribute="trailing" secondItem="RXi-qf-saO" secondAttribute="trailing" id="4aF-7c-Gto"/>
+                            <constraint firstItem="Naa-6F-o6d" firstAttribute="top" secondItem="5KC-9k-iGX" secondAttribute="bottom" constant="84" id="Dey-YU-gdW"/>
+                            <constraint firstItem="Naa-6F-o6d" firstAttribute="leading" secondItem="1oP-EZ-r5F" secondAttribute="leading" constant="40" id="NMR-8U-xgo"/>
+                            <constraint firstItem="RXi-qf-saO" firstAttribute="leading" secondItem="1oP-EZ-r5F" secondAttribute="leading" id="XyL-xp-SYp"/>
+                            <constraint firstItem="Naa-6F-o6d" firstAttribute="width" secondItem="Naa-6F-o6d" secondAttribute="height" multiplier="256:121" id="ZlU-VR-3Y2"/>
+                            <constraint firstItem="RXi-qf-saO" firstAttribute="top" secondItem="1oP-EZ-r5F" secondAttribute="top" id="jm0-Lu-L1c"/>
+                            <constraint firstAttribute="bottom" secondItem="RXi-qf-saO" secondAttribute="bottom" id="mBD-ru-0nV"/>
+                            <constraint firstItem="Naa-6F-o6d" firstAttribute="width" secondItem="1oP-EZ-r5F" secondAttribute="width" multiplier="0.5" id="ref-XC-T3p"/>
                         </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mkq-qb-DEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rWe-Re-qrG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Papara Big Logo" width="248" height="65"/>
+        <image name="img_auth_background" width="360" height="640"/>
+        <image name="img_logo_login" width="210" height="100"/>
     </resources>
 </document>

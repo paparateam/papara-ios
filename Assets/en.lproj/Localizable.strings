@@ -7,6 +7,15 @@
  */
 
 "AppNotFound.Title" = "Papara";
-"AppNotFound.Message" = "To send money from Papara, you must first download the Papara app.";
+"AppNotFound.Message.PaparaNumber" = "You must first download the Papara app.";
+"AppNotFound.Message.SendMoney" = "To send money from Papara, you must first download the Papara app.";
+"AppNotFound.Message.Pay" = "Do you want to download the papara app?";
 "AppNotFound.Install" = "Install";
 "AppNotFound.Cancel" = "Cancel";
+"AppNotFound.Continue" = "Continue";
+
+"Error.Wrong.Email" = "Wrong Email";
+"Error.Wrong.PaparaNumber" = "Wrong Papara Number";
+"Error.Wrong.PhoneNumber" = "Wrong Phone Number";
+
+"Error.Unexpected" = "Unexpected error occured.";
