@@ -31,7 +31,7 @@ public class Papara {
     
     fileprivate var application: UIApplication!
     fileprivate var appId: String!
-    var sandbox = false
+    var sandbox = true
     
     fileprivate var payCompletion: PayCompletion!
     fileprivate var sendMoneyCompletion: SendMoneyCompletion!
