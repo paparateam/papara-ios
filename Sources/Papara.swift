@@ -114,11 +114,11 @@ public class Papara {
             }
             let alertController = UIAlertController(title: Localization.AppNotFound.Title, message: message, preferredStyle: .alert)
             
-            let acceptAction = UIAlertAction(title: Localization.AppNotFound.Install, style: UIAlertActionStyle.default) { (cancelAction) in
+            let acceptAction = UIAlertAction(title: Localization.AppNotFound.Install, style: .default) { (cancelAction) in
                 UIApplication.shared.openURL(appStoreUrl)
             }
             
-            let cancelAction = UIAlertAction(title: cancelTitle, style: UIAlertActionStyle.default) { (cancelAction) in
+            let cancelAction = UIAlertAction(title: cancelTitle, style: .default) { (cancelAction) in
                 if host == .pay {
                     let storyboard = UIStoryboard(name: "Papara", bundle: bundle())
                     let navigationController = storyboard.instantiateViewController(withIdentifier: "PaparaNC") as! UINavigationController
@@ -173,7 +173,7 @@ public class Papara {
 
 extension Papara {
     // MARK: - AppDelegate
-    public class func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) {
+    public class func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         Papara.shared.application = application
         
         if let PaparaAppID = Bundle.main.object(forInfoDictionaryKey: "PaparaAppID") as? String {
@@ -201,7 +201,7 @@ extension Papara {
         return self.application(application, open: url, options: [:])
     }
     
-    public class func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+    public class func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
         if !isInitialized() {
             fatalError("Papara should be initialized.")
         }

@@ -141,7 +141,7 @@ class PaparaSendMoneyVC: UIViewController {
     
     func showAlertDialog(_ title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "TAMAM", style: UIAlertActionStyle.cancel) { (_) in }
+        let alertAction = UIAlertAction(title: "TAMAM", style: .cancel) { (_) in }
         alertController.addAction(alertAction)
         
         present(alertController, animated: true, completion: nil)
@@ -164,8 +164,8 @@ class PaparaSendMoneyVC: UIViewController {
     // MARK: Keyboard Management
     
     func registerKeyboardNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name:NSNotification.Name.UIKeyboardWillShow, object: nil);
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil);
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil);
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil);
     }
     
     @IBAction func hideKeyboard(_ sender: AnyObject) {
@@ -173,7 +173,7 @@ class PaparaSendMoneyVC: UIViewController {
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             self.scrollView.contentInset.bottom = keyboardSize.height
             self.scrollView.scrollIndicatorInsets.bottom = keyboardSize.height
         }

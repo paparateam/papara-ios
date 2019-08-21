@@ -67,7 +67,7 @@ class PaparaPayVC: UIViewController {
     
     func showAlertDialog(_ title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "TAMAM", style: UIAlertActionStyle.cancel) { (_) in }
+        let alertAction = UIAlertAction(title: "TAMAM", style: .cancel) { (_) in }
         alertController.addAction(alertAction)
         
         present(alertController, animated: true, completion: nil)
