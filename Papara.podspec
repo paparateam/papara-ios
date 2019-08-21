@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary = 'Papara SDK'
   s.homepage = 'https://github.com/paparateam/papara-ios'
   s.authors = { 'Papara' => 'info@papara.com' }
-  s.source = { :git => 'https://github.com/paparateam/papara-ios.git', :tag => s.version }
+  s.source = { :git => 'https://github.com/paparateam/papara-ios.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'
 
