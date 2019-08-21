@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lOU-U1-OJS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lOU-U1-OJS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,7 +18,7 @@
                         <viewControllerLayoutGuide type="bottom" id="VP3-eH-Exh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2Zs-qQ-b7o">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Papara Numarası" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSi-5Z-Pnx">
@@ -79,7 +79,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Ugf-wT-3fR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1MD-4B-0GL">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="saS-ng-NEM">
@@ -203,7 +203,7 @@
                         <viewControllerLayoutGuide type="bottom" id="32d-7S-ibK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TdE-Br-eHJ">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ödeme yapılmadı." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTD-30-kuy">
@@ -277,11 +277,11 @@
                         <viewControllerLayoutGuide type="bottom" id="a62-nv-e4a"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xW3-c4-YsX">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lD1-cz-j9b" customClass="GradientButton" customModule="Example" customModuleProvider="target">
-                                <rect key="frame" x="20" y="180.5" width="335" height="46"/>
+                                <rect key="frame" x="20" y="204.5" width="335" height="30"/>
                                 <color key="backgroundColor" red="0.77271497249603271" green="0.35535714030265808" blue="0.43030151724815369" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                 <state key="normal" title="Papara Numarası">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -291,7 +291,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rd4-zp-gm2" customClass="GradientButton" customModule="Example" customModuleProvider="target">
-                                <rect key="frame" x="20" y="246.5" width="335" height="46"/>
+                                <rect key="frame" x="20" y="254.5" width="335" height="30"/>
                                 <color key="backgroundColor" red="0.60392156862745094" green="0.20392156862745098" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Para Gönder">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -301,7 +301,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URm-5Q-3TL" customClass="GradientButton" customModule="Example" customModuleProvider="target">
-                                <rect key="frame" x="20" y="312.5" width="335" height="46"/>
+                                <rect key="frame" x="20" y="304.5" width="335" height="30"/>
                                 <color key="backgroundColor" red="0.54509812593460083" green="0.0" blue="0.63137257099151611" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Ödeme Yap">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -338,7 +338,7 @@
             <objects>
                 <navigationController id="lOU-U1-OJS" customClass="ExampleNC" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="8uj-Qk-gNj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <textAttributes key="titleTextAttributes">

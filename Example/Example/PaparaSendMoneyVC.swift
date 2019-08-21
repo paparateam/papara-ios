@@ -29,7 +29,6 @@ class PaparaSendMoneyVC: UIViewController {
         let wallet = walletTextField.text!.trimmingCharacters(in: .whitespaces)
         let amountString = amountTextField.text!.trimmingCharacters(in: .whitespaces)
         
-        var to: SendMoneyType?;
         switch sendMoneyType {
         case .paparaNumber:
             if wallet.isEmpty {
@@ -66,7 +65,7 @@ class PaparaSendMoneyVC: UIViewController {
             return
         }
         
-        if description.characters.count == 0 {
+        if description.count == 0 {
             showAlertDialog("Hata", message: "Lütfen açıklama giriniz.")
             return
         }
@@ -173,14 +172,14 @@ class PaparaSendMoneyVC: UIViewController {
         self.view.endEditing(true)
     }
     
-    func keyboardWillShow(_ notification: Notification) {
+    @objc func keyboardWillShow(_ notification: Notification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             self.scrollView.contentInset.bottom = keyboardSize.height
             self.scrollView.scrollIndicatorInsets.bottom = keyboardSize.height
         }
     }
     
-    func keyboardWillHide(_ notification: Notification) {
+    @objc func keyboardWillHide(_ notification: Notification) {
         self.scrollView.contentInset.bottom = 0
         self.scrollView.scrollIndicatorInsets.bottom = 0
     }

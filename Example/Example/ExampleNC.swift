@@ -13,7 +13,7 @@ class ExampleNC: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont.boldSystemFont(ofSize: 18)]
+        navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont.boldSystemFont(ofSize: 18)]
         navigationBar.tintColor = .white
         navigationBar.barTintColor = .white
         navigationBar.isTranslucent = false

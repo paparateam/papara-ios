@@ -11,7 +11,7 @@ import ObjectMapper
 
 class WebService {
     
-    static var apiUrl = "https://merchantapi-test-master.papara.com/"
+    static var apiUrl = "https://merchant.test.api.papara.com/"
     
     class func request<T: Mappable>(request: Pay, success: @escaping (T) -> Void, failure: @escaping (ServiceError) -> Void) {
         
