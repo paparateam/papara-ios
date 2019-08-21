@@ -242,7 +242,7 @@
 				135247951DF17E78004D1298 /* Frameworks */,
 				135247961DF17E78004D1298 /* Resources */,
 				13A8AC711E002C5000195083 /* Embed Frameworks */,
-				1B13C699C4AD1A68E7009002 /* [CP] Embed Pods Frameworks */,
+				EBEDCDA65AA44959DC3F9781 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -329,7 +329,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1B13C699C4AD1A68E7009002 /* [CP] Embed Pods Frameworks */ = {
+		EBEDCDA65AA44959DC3F9781 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -555,7 +555,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobillium.paparasdk.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -570,7 +570,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobillium.paparasdk.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

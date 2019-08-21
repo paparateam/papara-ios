@@ -191,7 +191,7 @@ extension Papara {
         }
         
         if let schemas = Bundle.main.object(forInfoDictionaryKey: "LSApplicationQueriesSchemes") as? [String] {
-            if schemas.index(of: paparaSchema) == nil {
+            if !schemas.contains(paparaSchema) {
                 fatalError(paparaSchema + " should be added to schemas.")
             }
         }
