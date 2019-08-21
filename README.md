@@ -11,7 +11,7 @@ You can sign up for a Papara account at http://www.papara.com.
 
 - iOS 9.0+
 - Xcode 8.0+
-- Swift 3.0+
+- Swift 4.0+
 
 ## Example
 
@@ -31,7 +31,7 @@ You need to have **Papara Sandbox iOS App** to try Example
 $ gem install cocoapods
 ```
 
-### Swift 3
+### Swift 4
 
 To integrate Papara into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
@@ -41,7 +41,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'Papara', '~> 3.0'
+    pod 'Papara', '~> 4.0'
 end
 ```
 
