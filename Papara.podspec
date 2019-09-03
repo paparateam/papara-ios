@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'Papara'
-  s.version = '5.0.0'
+  s.version = '5.1.0'
   s.license = 'MIT'
   s.summary = 'Papara SDK'
   s.homepage = 'https://github.com/paparateam/papara-ios'
@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
   s.source_files = 'Sources/*.swift'
 
   s.resource_bundles = {
-    'Papara' => ['Assets/{*}']
+    'Papara' => ['Assets/{*}', 'Sources/*.storyboard']
   }
 end
