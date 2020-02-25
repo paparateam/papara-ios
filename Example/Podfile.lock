@@ -9,7 +9,7 @@ DEPENDENCIES:
   - ObjectMapper
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - Hue
     - ObjectMapper
@@ -21,4 +21,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 4b00ddb62282a67a10e0b970575ff33e191119bd
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.4

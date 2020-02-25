@@ -15,7 +15,7 @@ class PaparaSendMoneyVC: UIViewController {
     @IBOutlet weak var walletTitleLabel: UILabel!
     @IBOutlet weak var walletTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
-    
+        
     public enum SendMoneyType {
         case paparaNumber
         case email
@@ -124,16 +124,11 @@ class PaparaSendMoneyVC: UIViewController {
             sendMoneyType = .email
         case 2:
             walletTitleLabel.text = "Telefon Numarası"
-            walletTextField.text = "+905535750045"
-            walletTextField.placeholder = "Örn: +905535750045"
+            walletTextField.text = "+905313513997"
+            walletTextField.placeholder = "Örn: +905313513997"
             walletTextField.keyboardType = .phonePad
             sendMoneyType = .mobile
-        default:
-            walletTitleLabel.text = "Papara Numarası"
-            walletTextField.text = "1441345047"
-            walletTextField.placeholder = "Örn: 1441345047"
-            walletTextField.keyboardType = .numberPad
-            sendMoneyType = .paparaNumber
+        default: break
         }
     }
     

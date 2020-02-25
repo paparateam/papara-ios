@@ -19,13 +19,13 @@ public class Papara {
     fileprivate static let appStoreUrl = URL(string: "itms-apps://itunes.apple.com/app/papara-cuzdan/id1146507477")!
     fileprivate static var paparaSchema: String {
         get {
-            return Papara.shared.sandbox ? "papara-sandbox" : "papara"
+            return Papara.shared.sandbox ? "paparatest" : "papara"
         }
     }
     
     public var domain: String {
         get {
-            return Papara.shared.sandbox ? "com.mobillium.papara-sandbox" : "com.mobillium.papara"
+            return Papara.shared.sandbox ? "com.mobillium.papara.test" : "com.mobillium.papara"
         }
     }
     
@@ -120,9 +120,8 @@ public class Papara {
             
             let cancelAction = UIAlertAction(title: cancelTitle, style: .default) { (cancelAction) in
                 if host == .pay {
-                    let storyboard = UIStoryboard(name: "Papara", bundle: bundle())
-                    let navigationController = storyboard.instantiateViewController(withIdentifier: "PaparaNC") as! UINavigationController
-                    let viewController = navigationController.topViewController as! PaparaPaymentVC
+                    let viewController = PaparaPaymentVC()
+                    let navigationController = UINavigationController(rootViewController: viewController)
                     viewController.paymentUrl = params["paymentUrl"]
                     viewController.redirectUrl = params["redirectUrl"]
                     viewController.payCompletion = Papara.shared.payCompletion
