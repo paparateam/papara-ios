@@ -1,7 +1,7 @@
 PODS:
-  - Alamofire (4.8.2)
+  - Alamofire (5.8.1)
   - Hue (5.0.0)
-  - ObjectMapper (3.5.1)
+  - ObjectMapper (4.2.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -9,16 +9,16 @@ DEPENDENCIES:
   - ObjectMapper
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - Alamofire
     - Hue
     - ObjectMapper
 
 SPEC CHECKSUMS:
-  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
   Hue: c129cb67be7d093a82bbbc30ce8a96757bf6f37a
-  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
 
-PODFILE CHECKSUM: 4b00ddb62282a67a10e0b970575ff33e191119bd
+PODFILE CHECKSUM: eb054762823e30f8649b7ae890bb758a2d4e87e8
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.13.0

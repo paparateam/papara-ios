@@ -6,11 +6,8 @@
 //  Copyright © 2017 Mobillium. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import Papara
-import Alamofire
-import ObjectMapper
 
 class PaparaPayVC: UIViewController {
         
@@ -45,7 +42,7 @@ class PaparaPayVC: UIViewController {
                 })
             }) { (error) in
                 alertController.dismiss(animated: true, completion: { 
-                    self.showAlertDialog("Error", message: error.message)
+                    self.showAlertDialog("Error", message: error.message ?? "")
                 })
             }
         })
@@ -53,9 +50,16 @@ class PaparaPayVC: UIViewController {
     }
     
     func payWithPapara(_ payment: Payment) {
-        Papara.pay(self, paymentId: payment.id, paymentUrl: payment.paymentUrl, redirectUrl: payment.redirectUrl) { (result) in
+        guard let id = payment.id,
+              let url = payment.paymentUrl,
+              let redirectUrl = payment.redirectUrl else {
+            showAlertDialog("Error", message: "Some of required data can be null!")
+            return
+        }
+        
+        Papara.pay(self, paymentId: id, paymentUrl: url, redirectUrl: redirectUrl) { (result) in
             switch result {
-            case .success(let paymentId, let referenceId, let status, let amount):
+            case .success:
                 self.showAlertDialog("Success", message: "Success")
             case .fail(let error):
                 self.showAlertDialog("Error", message: error.localizedDescription)
