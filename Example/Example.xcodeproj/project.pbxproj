@@ -88,6 +88,8 @@
 		94AF5750E2E4D65EC1A676C3 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76FF6C429F39316D4CC6B0B /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D000F6F12B7B893000C8306B /* Papara.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Papara.xcodeproj; path = ../Papara.xcodeproj; sourceTree = "<group>"; };
+		D0FDFFD12B7CE615003E6623 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		D0FDFFD32B7CE616003E6623 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
 		F865597CB828CCF9D6DCA899 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,7 +156,6 @@
 				A76FF6C429F39316D4CC6B0B /* Pods-Example.debug.xcconfig */,
 				F865597CB828CCF9D6DCA899 /* Pods-Example.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -387,6 +388,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				135247A01DF17E78004D1298 /* Base */,
+				D0FDFFD12B7CE615003E6623 /* en */,
+				D0FDFFD32B7CE616003E6623 /* tr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
