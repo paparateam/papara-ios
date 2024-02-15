@@ -32,41 +32,41 @@ class PaparaSendMoneyVC: UIViewController {
         switch sendMoneyType {
         case .paparaNumber:
             if wallet.isEmpty {
-                showAlertDialog("Hata", message: "Lütfen papara numarası giriniz.")
+                showAlertDialog(Resources.error, message: Resources.paparaNoAlert)
                 return
             }
             let paparaNumber = Int(wallet)
             
             if paparaNumber == nil {
-                showAlertDialog("Hata", message: "Geçersiz Papara Numarası girdiniz.")
+                showAlertDialog(Resources.error, message: Resources.paparaNoAlert)
                 return
             }
         case .email:
             if wallet.isEmpty {
-                showAlertDialog("Hata", message: "Lütfen e-posta adresi giriniz.")
+                showAlertDialog(Resources.error, message: Resources.emailAlert)
                 return
             }
         case .mobile:
             if wallet.isEmpty {
-                showAlertDialog("Hata", message: "Lütfen telefon numarası giriniz.")
+                showAlertDialog(Resources.error, message: Resources.phoneAlert)
                 return
             }
         }
         
         if amountString.isEmpty {
-            showAlertDialog("Hata", message: "Lütfen tutar giriniz.")
+            showAlertDialog(Resources.error, message: Resources.amountAlert)
             return
         }
         
         let amount = Double(amountString.replacingOccurrences(of: ",", with: "."))
         
         if amount == nil {
-            showAlertDialog("Hata", message: "Geçersiz tutar girdiniz.")
+            showAlertDialog(Resources.error, message: Resources.invalidAmountAlert)
             return
         }
         
         if description.count == 0 {
-            showAlertDialog("Hata", message: "Lütfen açıklama giriniz.")
+            showAlertDialog(Resources.error, message: Resources.descriptionAlert)
             return
         }
         
@@ -75,33 +75,33 @@ class PaparaSendMoneyVC: UIViewController {
             Papara.sendMoney(self, to: .paparaNumber(Int64(wallet)!), amount: amount!) { (result) in
                 switch result {
                 case .success:
-                    self.showAlertDialog("Success", message: "Success")
+                    self.showAlertDialog(Resources.success, message: Resources.success)
                 case .fail(let error):
-                    self.showAlertDialog("Fail", message: error.localizedDescription)
+                    self.showAlertDialog(Resources.fail, message: error.localizedDescription)
                 case .cancel:
-                    self.showAlertDialog("Cancel", message: "Cancel")
+                    self.showAlertDialog(Resources.cancel, message: Resources.cancel)
                 }
             }
         case .mobile:
             Papara.sendMoney(self, to: .mobile(wallet), amount: amount!) { (result) in
                 switch result {
                 case .success:
-                    self.showAlertDialog("Success", message: "Success")
+                    self.showAlertDialog(Resources.success, message: Resources.success)
                 case .fail(let error):
-                    self.showAlertDialog("Fail", message: error.localizedDescription)
+                    self.showAlertDialog(Resources.fail, message: error.localizedDescription)
                 case .cancel:
-                    self.showAlertDialog("Cancel", message: "Cancel")
+                    self.showAlertDialog(Resources.cancel, message: Resources.cancel)
                 }
             }
         case .email:
             Papara.sendMoney(self, to: .email(wallet), amount: amount!) { (result) in
                 switch result {
                 case .success:
-                    self.showAlertDialog("Success", message: "Success")
+                    self.showAlertDialog(Resources.success, message: Resources.success)
                 case .fail(let error):
-                    self.showAlertDialog("Fail", message: error.localizedDescription)
+                    self.showAlertDialog(Resources.fail, message: error.localizedDescription)
                 case .cancel:
-                    self.showAlertDialog("Cancel", message: "Cancel")
+                    self.showAlertDialog(Resources.cancel, message: Resources.cancel)
                 }
             }
         }
@@ -109,23 +109,21 @@ class PaparaSendMoneyVC: UIViewController {
     
     @IBAction func segmentControlDidValueChange(_ sender: Any) {
         self.view.endEditing(true)
+        walletTextField.text = nil
         switch (sender as! UISegmentedControl).selectedSegmentIndex {
         case 0:
-            walletTitleLabel.text = "Papara Numarası"
-            walletTextField.text = "1441345047"
-            walletTextField.placeholder = "Örn: 1441345047"
+            walletTitleLabel.text = Resources.paparaNo
+            walletTextField.placeholder = "\(Resources.exp) 0123456789"
             walletTextField.keyboardType = .numberPad
             sendMoneyType = .paparaNumber
         case 1:
-            walletTitleLabel.text = "E-posta Adresi"
-            walletTextField.text = "salih.aslan@mobillium.com"
-            walletTextField.placeholder = "Örn: salih.aslan@mobillium.com"
+            walletTitleLabel.text = Resources.mailAddress
+            walletTextField.placeholder = "\(Resources.exp) mail@gmail.com"
             walletTextField.keyboardType = .emailAddress
             sendMoneyType = .email
         case 2:
-            walletTitleLabel.text = "Telefon Numarası"
-            walletTextField.text = "+905313513997"
-            walletTextField.placeholder = "Örn: +905313513997"
+            walletTitleLabel.text = Resources.phoneNumber
+            walletTextField.placeholder = "\(Resources.exp) +905311112233"
             walletTextField.keyboardType = .phonePad
             sendMoneyType = .mobile
         default: break
@@ -136,7 +134,7 @@ class PaparaSendMoneyVC: UIViewController {
     
     func showAlertDialog(_ title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "TAMAM", style: .cancel) { (_) in }
+        let alertAction = UIAlertAction(title: Resources.ok, style: .cancel) { (_) in }
         alertController.addAction(alertAction)
         
         present(alertController, animated: true, completion: nil)
@@ -147,7 +145,6 @@ class PaparaSendMoneyVC: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.registerKeyboardNotifications()
         
-        walletTextField.text = "1441345047"
         amountTextField.text = "1.00"
     }
     

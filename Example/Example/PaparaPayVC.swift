@@ -20,20 +20,20 @@ class PaparaPayVC: UIViewController {
         let amountString = amountTextField.text!.trimmingCharacters(in: .whitespaces)
         
         if amountString.isEmpty {
-            showAlertDialog("Hata", message: "Lütfen tutar giriniz.")
+            showAlertDialog(Resources.error, message: Resources.amountAlert)
             return
         }
         
         let amount = Double(amountString.replacingOccurrences(of: ",", with: "."))
         
         if amount == nil {
-            showAlertDialog("Hata", message: "Geçersiz tutar girdiniz.")
+            showAlertDialog(Resources.error, message: Resources.invalidAmountAlert)
             return
         }
         
         let pay = Pay(amount: amount!)
         
-        let alertController = UIAlertController(title: "Ödeme oluşturuluyor...", message: nil, preferredStyle: .alert)
+        let alertController = UIAlertController(title: Resources.paymentGoingOn, message: nil, preferredStyle: .alert)
         
         self.present(alertController, animated: true, completion:  {
             WebService.request(request: pay, success: { (payment: Payment) in
@@ -42,7 +42,7 @@ class PaparaPayVC: UIViewController {
                 })
             }) { (error) in
                 alertController.dismiss(animated: true, completion: { 
-                    self.showAlertDialog("Error", message: error.message ?? "")
+                    self.showAlertDialog(Resources.error, message: error.message ?? "")
                 })
             }
         })
@@ -53,25 +53,25 @@ class PaparaPayVC: UIViewController {
         guard let id = payment.id,
               let url = payment.paymentUrl,
               let redirectUrl = payment.redirectUrl else {
-            showAlertDialog("Error", message: "Some of required data can be null!")
+            showAlertDialog(Resources.error, message: Resources.dontLeaveEmpty)
             return
         }
         
         Papara.pay(self, paymentId: id, paymentUrl: url, redirectUrl: redirectUrl) { (result) in
             switch result {
             case .success:
-                self.showAlertDialog("Success", message: "Success")
+                self.showAlertDialog(Resources.success, message: Resources.success)
             case .fail(let error):
-                self.showAlertDialog("Error", message: error.localizedDescription)
+                self.showAlertDialog(Resources.error, message: error.localizedDescription)
             case .cancel:
-                self.showAlertDialog("Cancel", message: "Cancel")
+                self.showAlertDialog(Resources.cancel, message: Resources.cancel)
             }
         }
     }
     
     func showAlertDialog(_ title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "TAMAM", style: .cancel) { (_) in }
+        let alertAction = UIAlertAction(title: Resources.ok, style: .cancel) { (_) in }
         alertController.addAction(alertAction)
         
         present(alertController, animated: true, completion: nil)
