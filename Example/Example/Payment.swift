@@ -7,7 +7,7 @@
 //
 
 struct Payment: Codable {
-    let userId: Int
+    let userId: Int?
     let id: String?
     let createdAt: String?
     let merchant: Merchant?

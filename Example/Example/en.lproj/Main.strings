@@ -2,11 +2,8 @@
 /* Class = "UISegmentedControl"; 31E-Ic-R1h.segmentTitles[0] = "Papara Numarası"; ObjectID = "31E-Ic-R1h"; */
 "31E-Ic-R1h.segmentTitles[0]" = "Papara No";
 
-/* Class = "UISegmentedControl"; 31E-Ic-R1h.segmentTitles[1] = "E-Posta"; ObjectID = "31E-Ic-R1h"; */
-"31E-Ic-R1h.segmentTitles[1]" = "E-mail";
-
-/* Class = "UISegmentedControl"; 31E-Ic-R1h.segmentTitles[2] = "Telefon Numarası"; ObjectID = "31E-Ic-R1h"; */
-"31E-Ic-R1h.segmentTitles[2]" = "Phone Number";
+/* Class = "UISegmentedControl"; 31E-Ic-R1h.segmentTitles[1] = "Telefon Numarası"; ObjectID = "31E-Ic-R1h"; */
+"31E-Ic-R1h.segmentTitles[1]" = "Phone Number";
 
 /* Class = "UIButton"; normalTitle = "GÖNDER"; ObjectID = "3OP-W2-PVo"; */
 "3OP-W2-PVo.normalTitle" = "SEND";

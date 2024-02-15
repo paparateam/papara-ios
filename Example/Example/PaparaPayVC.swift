@@ -50,14 +50,13 @@ class PaparaPayVC: UIViewController {
     }
     
     func payWithPapara(_ payment: Payment) {
-        guard let id = payment.id,
-              let url = payment.paymentUrl,
-              let redirectUrl = payment.redirectUrl else {
+        guard let url = payment.paymentUrl,
+              let redirectUrl = payment.returningRedirectUrl else {
             showAlertDialog(Resources.error, message: Resources.dontLeaveEmpty)
             return
         }
         
-        Papara.pay(self, paymentId: id, paymentUrl: url, redirectUrl: redirectUrl) { (result) in
+        Papara.pay(self, paymentId: payment.id ?? "", paymentUrl: url, redirectUrl: redirectUrl) { (result) in
             switch result {
             case .success:
                 self.showAlertDialog(Resources.success, message: Resources.success)

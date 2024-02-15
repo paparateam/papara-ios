@@ -18,7 +18,6 @@ class PaparaSendMoneyVC: UIViewController {
         
     public enum SendMoneyType {
         case paparaNumber
-        case email
         case mobile
     }
     
@@ -39,11 +38,6 @@ class PaparaSendMoneyVC: UIViewController {
             
             if paparaNumber == nil {
                 showAlertDialog(Resources.error, message: Resources.paparaNoAlert)
-                return
-            }
-        case .email:
-            if wallet.isEmpty {
-                showAlertDialog(Resources.error, message: Resources.emailAlert)
                 return
             }
         case .mobile:
@@ -93,17 +87,6 @@ class PaparaSendMoneyVC: UIViewController {
                     self.showAlertDialog(Resources.cancel, message: Resources.cancel)
                 }
             }
-        case .email:
-            Papara.sendMoney(self, to: .email(wallet), amount: amount!) { (result) in
-                switch result {
-                case .success:
-                    self.showAlertDialog(Resources.success, message: Resources.success)
-                case .fail(let error):
-                    self.showAlertDialog(Resources.fail, message: error.localizedDescription)
-                case .cancel:
-                    self.showAlertDialog(Resources.cancel, message: Resources.cancel)
-                }
-            }
         }
     }
     
@@ -117,11 +100,6 @@ class PaparaSendMoneyVC: UIViewController {
             walletTextField.keyboardType = .numberPad
             sendMoneyType = .paparaNumber
         case 1:
-            walletTitleLabel.text = Resources.mailAddress
-            walletTextField.placeholder = "\(Resources.exp) mail@gmail.com"
-            walletTextField.keyboardType = .emailAddress
-            sendMoneyType = .email
-        case 2:
             walletTitleLabel.text = Resources.phoneNumber
             walletTextField.placeholder = "\(Resources.exp) +905311112233"
             walletTextField.keyboardType = .phonePad

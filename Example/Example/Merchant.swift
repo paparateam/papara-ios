@@ -7,6 +7,7 @@
 //
 
 struct Merchant: Codable {
+    let id: String?
     let legalName: String?
     let brandName: String?
     let balances: [MerchantBalance]?

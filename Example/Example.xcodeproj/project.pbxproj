@@ -31,6 +31,7 @@
 		D0FDFFD72B7DE886003E6623 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0FDFFD92B7DE886003E6623 /* Localizable.strings */; };
 		D0FDFFDC2B7DEA43003E6623 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDFFDB2B7DEA43003E6623 /* String+Extensions.swift */; };
 		D0FDFFDE2B7E045D003E6623 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDFFDD2B7E045D003E6623 /* Resources.swift */; };
+		D0FDFFE12B7E4598003E6623 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDFFE02B7E4598003E6623 /* BaseResponse.swift */; };
 		ECB05BF6C249A50777ECBBEB /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94AF5750E2E4D65EC1A676C3 /* Pods_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 		D0FDFFDB2B7DEA43003E6623 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		D0FDFFDD2B7E045D003E6623 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		D0FDFFDF2B7E0D8F003E6623 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D0FDFFE02B7E4598003E6623 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		F865597CB828CCF9D6DCA899 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -206,6 +208,7 @@
 				7AFFF1BB1F4DB9F300F34D5D /* ServiceResult.swift */,
 				7AFFF1BD1F4DBA9700F34D5D /* ServiceError.swift */,
 				7AFFF1BF1F4DBAF200F34D5D /* Pay.swift */,
+				D0FDFFE02B7E4598003E6623 /* BaseResponse.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				1352479E1DF17E78004D1298 /* PaparaSendMoneyVC.swift in Sources */,
 				1352479C1DF17E78004D1298 /* AppDelegate.swift in Sources */,
 				7AFFF1B91F4DB86900F34D5D /* AllowedPaymentTypes.swift in Sources */,
+				D0FDFFE12B7E4598003E6623 /* BaseResponse.swift in Sources */,
 				7AFFF1B71F4DB85F00F34D5D /* MerchantBalance.swift in Sources */,
 				7AFFF1C31F4DBCC900F34D5D /* WebService.swift in Sources */,
 				7AFFF1BC1F4DB9F300F34D5D /* ServiceResult.swift in Sources */,

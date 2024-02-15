@@ -131,7 +131,6 @@
                                         </constraints>
                                         <segments>
                                             <segment title="Papara Numarası"/>
-                                            <segment title="E-Posta"/>
                                             <segment title="Telefon Numarası"/>
                                         </segments>
                                         <color key="tintColor" red="0.54509812589999995" green="0.0" blue="0.63137257099999999" alpha="1" colorSpace="calibratedRGB"/>

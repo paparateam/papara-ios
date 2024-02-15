@@ -15,7 +15,7 @@ protocol WebServiceProtocol {
 
 struct WebService: WebServiceProtocol {
     
-    static var apiUrl = "https://merchant.test.api.papara.com/"
+    static var apiUrl = "https://merchant-api.test.papara.com/"
     
     static func request<T: Codable>(request: Pay, success: @escaping (T) -> Void, failure: @escaping (ServiceError) -> Void) {
         
@@ -30,11 +30,12 @@ struct WebService: WebServiceProtocol {
         .responseData { response in
             switch response.result {
             case .success(let data):
-                guard let responseData = try? JSONDecoder().decode(T.self, from: data) else {
+                guard let responseData = try? JSONDecoder().decode(BaseResponse<T>.self, from: data),
+                      let data = responseData.data else {
                     failure(ServiceError(code: -1, message: "Decoding error"))
                     return
                 }
-                success(responseData)
+                success(data)
             case .failure(let error):
                 guard let data = response.data,
                       let decodedError = try? JSONDecoder().decode(ServiceError.self, from: data) else {

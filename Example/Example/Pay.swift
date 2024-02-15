@@ -9,7 +9,7 @@
 import Alamofire
 
 struct Pay: Codable {
-    var httpMethod = "post"
+    var httpMethod = "POST"
     var path = "payments"
     var amount: Double!
     var referenceId = "123456789"

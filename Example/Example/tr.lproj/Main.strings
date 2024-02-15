@@ -3,10 +3,7 @@
 "31E-Ic-R1h.segmentTitles[0]" = "Papara Numarası";
 
 /* Class = "UISegmentedControl"; 31E-Ic-R1h.segmentTitles[1] = "E-Posta"; ObjectID = "31E-Ic-R1h"; */
-"31E-Ic-R1h.segmentTitles[1]" = "E-Posta";
-
-/* Class = "UISegmentedControl"; 31E-Ic-R1h.segmentTitles[2] = "Telefon Numarası"; ObjectID = "31E-Ic-R1h"; */
-"31E-Ic-R1h.segmentTitles[2]" = "Telefon Numarası";
+"31E-Ic-R1h.segmentTitles[1]" = "Telefon Numarası";
 
 /* Class = "UIButton"; normalTitle = "GÖNDER"; ObjectID = "3OP-W2-PVo"; */
 "3OP-W2-PVo.normalTitle" = "GÖNDER";
