@@ -12,8 +12,6 @@
 		135247A11DF17E78004D1298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1352479F1DF17E78004D1298 /* Main.storyboard */; };
 		135247A31DF17E78004D1298 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 135247A21DF17E78004D1298 /* Assets.xcassets */; };
 		135247A61DF17E78004D1298 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 135247A41DF17E78004D1298 /* LaunchScreen.storyboard */; };
-		13A8AC6D1E002C5000195083 /* Papara.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13094C791DFEBA350078DD5F /* Papara.framework */; };
-		13A8AC6E1E002C5000195083 /* Papara.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 13094C791DFEBA350078DD5F /* Papara.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7A1679771F2B53BC00919F1A /* PaparaNumberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1679761F2B53BC00919F1A /* PaparaNumberVC.swift */; };
 		7A16797A1F2B6BCA00919F1A /* PaparaPayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1679791F2B6BCA00919F1A /* PaparaPayVC.swift */; };
 		7A47C5851F5013E1007695E0 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A47C5841F5013E1007695E0 /* GradientView.swift */; };
@@ -28,48 +26,40 @@
 		7AFFF1BE1F4DBA9700F34D5D /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFFF1BD1F4DBA9700F34D5D /* ServiceError.swift */; };
 		7AFFF1C01F4DBAF200F34D5D /* Pay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFFF1BF1F4DBAF200F34D5D /* Pay.swift */; };
 		7AFFF1C31F4DBCC900F34D5D /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFFF1C21F4DBCC900F34D5D /* WebService.swift */; };
-		7AFFF1C51F4DC89500F34D5D /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971C7680C9CE36147C308FE2 /* Pods_Example.framework */; };
+		D000F6FA2B7B8AD900C8306B /* Papara.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D000F6F72B7B893000C8306B /* Papara.framework */; };
+		D000F6FB2B7B8AD900C8306B /* Papara.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D000F6F72B7B893000C8306B /* Papara.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D0FDFFD72B7DE886003E6623 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0FDFFD92B7DE886003E6623 /* Localizable.strings */; };
+		D0FDFFDC2B7DEA43003E6623 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDFFDB2B7DEA43003E6623 /* String+Extensions.swift */; };
+		D0FDFFDE2B7E045D003E6623 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDFFDD2B7E045D003E6623 /* Resources.swift */; };
+		D0FDFFE12B7E4598003E6623 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDFFE02B7E4598003E6623 /* BaseResponse.swift */; };
+		ECB05BF6C249A50777ECBBEB /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94AF5750E2E4D65EC1A676C3 /* Pods_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		13094C781DFEBA350078DD5F /* PBXContainerItemProxy */ = {
+		D000F6F62B7B893000C8306B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 13094C731DFEBA350078DD5F /* Papara.xcodeproj */;
+			containerPortal = D000F6F12B7B893000C8306B /* Papara.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 13FFB8BF1DD5B22F00062F14;
 			remoteInfo = Papara;
 		};
-		13094C7A1DFEBA350078DD5F /* PBXContainerItemProxy */ = {
+		D000F6F82B7B893000C8306B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 13094C731DFEBA350078DD5F /* Papara.xcodeproj */;
+			containerPortal = D000F6F12B7B893000C8306B /* Papara.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 13FFB8C71DD5B23000062F14;
 			remoteInfo = PaparaTests;
 		};
-		13094C7C1DFEBA420078DD5F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 13094C731DFEBA350078DD5F /* Papara.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 13FFB8BE1DD5B22F00062F14;
-			remoteInfo = Papara;
-		};
-		13A8AC6F1E002C5000195083 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 13094C731DFEBA350078DD5F /* Papara.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 13FFB8BE1DD5B22F00062F14;
-			remoteInfo = Papara;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		13A8AC711E002C5000195083 /* Embed Frameworks */ = {
+		D000F6E62B7B51CE00C8306B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				13A8AC6E1E002C5000195083 /* Papara.framework in Embed Frameworks */,
+				D000F6FB2B7B8AD900C8306B /* Papara.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,7 +67,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		13094C731DFEBA350078DD5F /* Papara.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Papara.xcodeproj; path = ../Papara.xcodeproj; sourceTree = "<group>"; };
 		135247981DF17E78004D1298 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1352479B1DF17E78004D1298 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1352479D1DF17E78004D1298 /* PaparaSendMoneyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaparaSendMoneyVC.swift; sourceTree = "<group>"; };
@@ -86,8 +75,6 @@
 		135247A51DF17E78004D1298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		135247A71DF17E78004D1298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		137A1A1C1E30E6B60094360F /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		3A2B3D65731247C16A57EFD4 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
-		52A38C6793F64851EB4E1F8C /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		7A1679761F2B53BC00919F1A /* PaparaNumberVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaparaNumberVC.swift; sourceTree = "<group>"; };
 		7A1679791F2B6BCA00919F1A /* PaparaPayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaparaPayVC.swift; sourceTree = "<group>"; };
 		7A47C5841F5013E1007695E0 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -102,7 +89,17 @@
 		7AFFF1BD1F4DBA9700F34D5D /* ServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		7AFFF1BF1F4DBAF200F34D5D /* Pay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pay.swift; sourceTree = "<group>"; };
 		7AFFF1C21F4DBCC900F34D5D /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
-		971C7680C9CE36147C308FE2 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94AF5750E2E4D65EC1A676C3 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A76FF6C429F39316D4CC6B0B /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		D000F6F12B7B893000C8306B /* Papara.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Papara.xcodeproj; path = ../Papara.xcodeproj; sourceTree = "<group>"; };
+		D0FDFFD12B7CE615003E6623 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		D0FDFFD32B7CE616003E6623 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
+		D0FDFFD82B7DE886003E6623 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D0FDFFDB2B7DEA43003E6623 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		D0FDFFDD2B7E045D003E6623 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		D0FDFFDF2B7E0D8F003E6623 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D0FDFFE02B7E4598003E6623 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		F865597CB828CCF9D6DCA899 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,40 +107,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AFFF1C51F4DC89500F34D5D /* Pods_Example.framework in Frameworks */,
-				13A8AC6D1E002C5000195083 /* Papara.framework in Frameworks */,
+				D000F6FA2B7B8AD900C8306B /* Papara.framework in Frameworks */,
+				ECB05BF6C249A50777ECBBEB /* Pods_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0356FFA98D463D0805DA21CF /* Pods */ = {
+		00658128DBA58B0312C04544 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				52A38C6793F64851EB4E1F8C /* Pods-Example.debug.xcconfig */,
-				3A2B3D65731247C16A57EFD4 /* Pods-Example.release.xcconfig */,
+				94AF5750E2E4D65EC1A676C3 /* Pods_Example.framework */,
 			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		13094C741DFEBA350078DD5F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				13094C791DFEBA350078DD5F /* Papara.framework */,
-				13094C7B1DFEBA350078DD5F /* PaparaTests.xctest */,
-			);
-			name = Products;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		1352478F1DF17E78004D1298 = {
 			isa = PBXGroup;
 			children = (
+				D000F6F12B7B893000C8306B /* Papara.xcodeproj */,
 				1352479A1DF17E78004D1298 /* Example */,
 				135247991DF17E78004D1298 /* Products */,
-				13094C731DFEBA350078DD5F /* Papara.xcodeproj */,
-				0356FFA98D463D0805DA21CF /* Pods */,
-				287017AB3F2BA0A1EA9EF6E4 /* Frameworks */,
+				542FCE8CD94CB3660D35F396 /* Pods */,
+				00658128DBA58B0312C04544 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,6 +145,7 @@
 		1352479A1DF17E78004D1298 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				D0FDFFD42B7DE856003E6623 /* Localizable */,
 				7A47C5891F5016F1007695E0 /* Extensions */,
 				7A47C5821F5013D1007695E0 /* CustomView */,
 				7AFFF1C11F4DBCBC00F34D5D /* WebService */,
@@ -172,12 +160,13 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
-		287017AB3F2BA0A1EA9EF6E4 /* Frameworks */ = {
+		542FCE8CD94CB3660D35F396 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				971C7680C9CE36147C308FE2 /* Pods_Example.framework */,
+				A76FF6C429F39316D4CC6B0B /* Pods-Example.debug.xcconfig */,
+				F865597CB828CCF9D6DCA899 /* Pods-Example.release.xcconfig */,
 			);
-			name = Frameworks;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		7A47C5821F5013D1007695E0 /* CustomView */ = {
@@ -194,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				7A47C58A1F501701007695E0 /* Color.swift */,
+				D0FDFFDB2B7DEA43003E6623 /* String+Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -218,6 +208,7 @@
 				7AFFF1BB1F4DB9F300F34D5D /* ServiceResult.swift */,
 				7AFFF1BD1F4DBA9700F34D5D /* ServiceError.swift */,
 				7AFFF1BF1F4DBAF200F34D5D /* Pay.swift */,
+				D0FDFFE02B7E4598003E6623 /* BaseResponse.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -230,6 +221,24 @@
 			name = WebService;
 			sourceTree = "<group>";
 		};
+		D000F6F22B7B893000C8306B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D000F6F72B7B893000C8306B /* Papara.framework */,
+				D000F6F92B7B893000C8306B /* PaparaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0FDFFD42B7DE856003E6623 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				D0FDFFD92B7DE886003E6623 /* Localizable.strings */,
+				D0FDFFDD2B7E045D003E6623 /* Resources.swift */,
+			);
+			name = Localizable;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -237,18 +246,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 135247C01DF17E78004D1298 /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
-				FE5781F5D1683BABF4EFBFD7 /* [CP] Check Pods Manifest.lock */,
+				0485D2D0E77585DAF870581B /* [CP] Check Pods Manifest.lock */,
 				135247941DF17E78004D1298 /* Sources */,
 				135247951DF17E78004D1298 /* Frameworks */,
 				135247961DF17E78004D1298 /* Resources */,
-				13A8AC711E002C5000195083 /* Embed Frameworks */,
-				EBEDCDA65AA44959DC3F9781 /* [CP] Embed Pods Frameworks */,
+				D000F6E62B7B51CE00C8306B /* Embed Frameworks */,
+				7B3CAA737FC9D771CC3C8CDB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				13094C7D1DFEBA420078DD5F /* PBXTargetDependency */,
-				13A8AC701E002C5000195083 /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -287,8 +294,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 13094C741DFEBA350078DD5F /* Products */;
-					ProjectRef = 13094C731DFEBA350078DD5F /* Papara.xcodeproj */;
+					ProductGroup = D000F6F22B7B893000C8306B /* Products */;
+					ProjectRef = D000F6F12B7B893000C8306B /* Papara.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -299,18 +306,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		13094C791DFEBA350078DD5F /* Papara.framework */ = {
+		D000F6F72B7B893000C8306B /* Papara.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Papara.framework;
-			remoteRef = 13094C781DFEBA350078DD5F /* PBXContainerItemProxy */;
+			remoteRef = D000F6F62B7B893000C8306B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		13094C7B1DFEBA350078DD5F /* PaparaTests.xctest */ = {
+		D000F6F92B7B893000C8306B /* PaparaTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = PaparaTests.xctest;
-			remoteRef = 13094C7A1DFEBA350078DD5F /* PBXContainerItemProxy */;
+			remoteRef = D000F6F82B7B893000C8306B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -321,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				135247A61DF17E78004D1298 /* LaunchScreen.storyboard in Resources */,
+				D0FDFFD72B7DE886003E6623 /* Localizable.strings in Resources */,
 				135247A31DF17E78004D1298 /* Assets.xcassets in Resources */,
 				135247A11DF17E78004D1298 /* Main.storyboard in Resources */,
 			);
@@ -329,7 +337,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		EBEDCDA65AA44959DC3F9781 /* [CP] Embed Pods Frameworks */ = {
+		0485D2D0E77585DAF870581B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B3CAA737FC9D771CC3C8CDB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -337,36 +367,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Hue/Hue.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hue.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FE5781F5D1683BABF4EFBFD7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Example-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -381,6 +389,7 @@
 				1352479E1DF17E78004D1298 /* PaparaSendMoneyVC.swift in Sources */,
 				1352479C1DF17E78004D1298 /* AppDelegate.swift in Sources */,
 				7AFFF1B91F4DB86900F34D5D /* AllowedPaymentTypes.swift in Sources */,
+				D0FDFFE12B7E4598003E6623 /* BaseResponse.swift in Sources */,
 				7AFFF1B71F4DB85F00F34D5D /* MerchantBalance.swift in Sources */,
 				7AFFF1C31F4DBCC900F34D5D /* WebService.swift in Sources */,
 				7AFFF1BC1F4DB9F300F34D5D /* ServiceResult.swift in Sources */,
@@ -388,8 +397,10 @@
 				7A47C58E1F501A6E007695E0 /* GradientButton.swift in Sources */,
 				7A1679771F2B53BC00919F1A /* PaparaNumberVC.swift in Sources */,
 				7AFFF1B21F4DB71600F34D5D /* Payment.swift in Sources */,
+				D0FDFFDC2B7DEA43003E6623 /* String+Extensions.swift in Sources */,
 				7A47C5851F5013E1007695E0 /* GradientView.swift in Sources */,
 				7AFFF1B51F4DB82400F34D5D /* Merchant.swift in Sources */,
+				D0FDFFDE2B7E045D003E6623 /* Resources.swift in Sources */,
 				7AFFF1C01F4DBAF200F34D5D /* Pay.swift in Sources */,
 				7A47C5881F5015E2007695E0 /* ExampleNC.swift in Sources */,
 			);
@@ -397,24 +408,13 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		13094C7D1DFEBA420078DD5F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Papara;
-			targetProxy = 13094C7C1DFEBA420078DD5F /* PBXContainerItemProxy */;
-		};
-		13A8AC701E002C5000195083 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Papara;
-			targetProxy = 13A8AC6F1E002C5000195083 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
 		1352479F1DF17E78004D1298 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				135247A01DF17E78004D1298 /* Base */,
+				D0FDFFD12B7CE615003E6623 /* en */,
+				D0FDFFD32B7CE616003E6623 /* tr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -426,6 +426,15 @@
 				137A1A1C1E30E6B60094360F /* tr */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D0FDFFD92B7DE886003E6623 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0FDFFD82B7DE886003E6623 /* en */,
+				D0FDFFDF2B7E0D8F003E6623 /* tr */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -546,13 +555,13 @@
 		};
 		135247C11DF17E78004D1298 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 52A38C6793F64851EB4E1F8C /* Pods-Example.debug.xcconfig */;
+			baseConfigurationReference = A76FF6C429F39316D4CC6B0B /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = WE3EAZGL8A;
 				INFOPLIST_FILE = Example/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobillium.paparasdk.example;
@@ -563,13 +572,13 @@
 		};
 		135247C21DF17E78004D1298 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A2B3D65731247C16A57EFD4 /* Pods-Example.release.xcconfig */;
+			baseConfigurationReference = F865597CB828CCF9D6DCA899 /* Pods-Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = WE3EAZGL8A;
 				INFOPLIST_FILE = Example/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobillium.paparasdk.example;

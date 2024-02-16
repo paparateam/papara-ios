@@ -1,0 +1,66 @@
+
+/* Class = "UISegmentedControl"; 31E-Ic-R1h.segmentTitles[0] = "Papara Numarası"; ObjectID = "31E-Ic-R1h"; */
+"31E-Ic-R1h.segmentTitles[0]" = "Papara No";
+
+/* Class = "UISegmentedControl"; 31E-Ic-R1h.segmentTitles[1] = "Telefon Numarası"; ObjectID = "31E-Ic-R1h"; */
+"31E-Ic-R1h.segmentTitles[1]" = "Phone Number";
+
+/* Class = "UIButton"; normalTitle = "GÖNDER"; ObjectID = "3OP-W2-PVo"; */
+"3OP-W2-PVo.normalTitle" = "SEND";
+
+/* Class = "UILabel"; text = "Papara Numarası"; ObjectID = "3Ry-wc-KHq"; */
+"3Ry-wc-KHq.text" = "Papara No";
+
+/* Class = "UIButton"; normalTitle = "PAPARA NUMARASINI AL"; ObjectID = "7uQ-wM-MxP"; */
+"7uQ-wM-MxP.normalTitle" = "GET YOUR PAPARA NO";
+
+/* Class = "UITextField"; placeholder = "Örn: 0123456789"; ObjectID = "CX4-x5-q9p"; */
+"CX4-x5-q9p.placeholder" = "Ex: 0123456789";
+
+/* Class = "UILabel"; text = "Tutar"; ObjectID = "OYZ-dK-rpz"; */
+"OYZ-dK-rpz.text" = "Balance";
+
+/* Class = "UINavigationItem"; title = "Papara SDK Papara Numarası"; ObjectID = "PvA-b8-i8k"; */
+"PvA-b8-i8k.title" = "Papara SDK Papara No";
+
+/* Class = "UIButton"; normalTitle = "Ödeme Yap"; ObjectID = "URm-5Q-3TL"; */
+"URm-5Q-3TL.normalTitle" = "Make Payment";
+
+/* Class = "UITextField"; placeholder = "Örn: 10,50 veya 10.50"; ObjectID = "VI4-BU-Yjn"; */
+"VI4-BU-Yjn.placeholder" = "Ex: 10,50 or 10.50";
+
+/* Class = "UITextField"; placeholder = "Örn: 10,50 veya 10.50"; ObjectID = "Xvf-Dn-cJX"; */
+"Xvf-Dn-cJX.placeholder" = "Ex: 10,50 or 10.50";
+
+/* Class = "UIBarButtonItem"; title = "Geri"; ObjectID = "YTv-uA-NbN"; */
+"YTv-uA-NbN.title" = "Back";
+
+/* Class = "UILabel"; text = "Papara Numarası"; ObjectID = "aSi-5Z-Pnx"; */
+"aSi-5Z-Pnx.text" = "Papara No";
+
+/* Class = "UILabel"; text = "Papara Numarası Bilinmiyor"; ObjectID = "dFJ-6B-YML"; */
+"dFJ-6B-YML.text" = "Unknown Papara No";
+
+/* Class = "UINavigationItem"; title = "Papara SDK Ödeme"; ObjectID = "dZO-e9-nEV"; */
+"dZO-e9-nEV.title" = "Papara SDK Payment";
+
+/* Class = "UILabel"; text = "Ödeme yapılmadı."; ObjectID = "iTD-30-kuy"; */
+"iTD-30-kuy.text" = "Payment failed";
+
+/* Class = "UIButton"; normalTitle = "Papara Numarası"; ObjectID = "lD1-cz-j9b"; */
+"lD1-cz-j9b.normalTitle" = "Papara No";
+
+/* Class = "UILabel"; text = "Tutar"; ObjectID = "n7P-9D-kvH"; */
+"n7P-9D-kvH.text" = "Balance";
+
+/* Class = "UINavigationItem"; title = "Papara SDK"; ObjectID = "ofh-21-9aA"; */
+"ofh-21-9aA.title" = "Papara SDK";
+
+/* Class = "UIButton"; normalTitle = "Para Gönder"; ObjectID = "rd4-zp-gm2"; */
+"rd4-zp-gm2.normalTitle" = "Send Money";
+
+/* Class = "UIButton"; normalTitle = "ÖDE"; ObjectID = "sDa-FO-ecC"; */
+"sDa-FO-ecC.normalTitle" = "PAY";
+
+/* Class = "UINavigationItem"; title = "Papara SDK Para Gönder"; ObjectID = "zOS-hF-GH3"; */
+"zOS-hF-GH3.title" = "Papara SDK Send Money";

@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.authors = { 'Papara' => 'info@papara.com' }
   s.source = { :git => 'https://github.com/paparateam/papara-ios.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '11.0'
   s.swift_version = '5.0'
 
   s.source_files = 'Sources/*.swift'

@@ -6,22 +6,10 @@
 //  Copyright © 2017 Mobillium. All rights reserved.
 //
 
-import ObjectMapper
-
-class Merchant: Mappable {
-    
-    var legalName: String!
-    var brandName: String!
-    var balances: [MerchantBalance]!
-    var allowedPaymentTypes: [AllowedPaymentTypes]!
-    
-    required init?(map: Map) {}
-    
-    func mapping(map: Map) {
-        legalName               <- map["legalName"]
-        brandName               <- map["brandName"]
-        balances                <- map["balances"]
-        allowedPaymentTypes     <- map["allowedPaymentTypes"]
-    }
-    
+struct Merchant: Codable {
+    let id: String?
+    let legalName: String?
+    let brandName: String?
+    let balances: [MerchantBalance]?
+    let allowedPaymentTypes: [AllowedPaymentTypes]?
 }

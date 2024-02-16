@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  Example
+
+  Created by Cemal Bayrı on 15.02.2024.
+  Copyright © 2024 Mobillium. All rights reserved.
+*/
+
+"Hata" = "Hata";
+"İşlem Başarılı" = "İşlem Başarılı";
+"İptal" = "İptal";
+"Tamam" = "Tamam";
+"İşlem Başarısız" = "İşlem Başarısız";
+"Papara No" = "Papara No";
+"Örn:" = "Örn:";
+"E-posta Adresi" = "E-posta Adresi";
+"Telefon Numarası" = "Telefon Numarası";
+"Lütfen papara numarası giriniz." = "Lütfen papara numarası giriniz.";
+"Geçersiz Papara Numarası girdiniz." = "Geçersiz Papara Numarası girdiniz.";
+"Lütfen e-posta adresi giriniz." = "Lütfen e-posta adresi giriniz.";
+"Lütfen telefon numarası giriniz." = "Lütfen telefon numarası giriniz.";
+"Lütfen tutar giriniz." = "Lütfen tutar giriniz.";
+"Geçersiz tutar girdiniz." = "Geçersiz tutar girdiniz.";
+"Lütfen açıklama giriniz." = "Lütfen açıklama giriniz.";
+"Ödeme oluşturuluyor..." = "Ödeme oluşturuluyor...";
+"Lütfen gerekli alanları boş bırakmayınız" = "Lütfen gerekli alanları boş bırakmayınız";

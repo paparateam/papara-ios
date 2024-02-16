@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="O0z-sd-bUB">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="O0z-sd-bUB">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,23 +19,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_auth_background" translatesAutoresizingMaskIntoConstraints="NO" id="RXi-qf-saO">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_logo_login" translatesAutoresizingMaskIntoConstraints="NO" id="Naa-6F-o6d">
-                                <rect key="frame" x="40" y="104" width="187.5" height="88.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-light" translatesAutoresizingMaskIntoConstraints="NO" id="5f3-nI-y5N">
+                                <rect key="frame" x="102.5" y="308.5" width="170" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HXI-af-F7t"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="RXi-qf-saO" secondAttribute="trailing" id="4aF-7c-Gto"/>
-                            <constraint firstItem="Naa-6F-o6d" firstAttribute="top" secondItem="5KC-9k-iGX" secondAttribute="bottom" constant="84" id="Dey-YU-gdW"/>
-                            <constraint firstItem="Naa-6F-o6d" firstAttribute="leading" secondItem="1oP-EZ-r5F" secondAttribute="leading" constant="40" id="NMR-8U-xgo"/>
-                            <constraint firstItem="RXi-qf-saO" firstAttribute="leading" secondItem="1oP-EZ-r5F" secondAttribute="leading" id="XyL-xp-SYp"/>
-                            <constraint firstItem="Naa-6F-o6d" firstAttribute="width" secondItem="Naa-6F-o6d" secondAttribute="height" multiplier="256:121" id="ZlU-VR-3Y2"/>
-                            <constraint firstItem="RXi-qf-saO" firstAttribute="top" secondItem="1oP-EZ-r5F" secondAttribute="top" id="jm0-Lu-L1c"/>
-                            <constraint firstAttribute="bottom" secondItem="RXi-qf-saO" secondAttribute="bottom" id="mBD-ru-0nV"/>
-                            <constraint firstItem="Naa-6F-o6d" firstAttribute="width" secondItem="1oP-EZ-r5F" secondAttribute="width" multiplier="0.5" id="ref-XC-T3p"/>
+                            <constraint firstItem="5f3-nI-y5N" firstAttribute="centerX" secondItem="1oP-EZ-r5F" secondAttribute="centerX" id="czQ-e6-a9Q"/>
+                            <constraint firstItem="5f3-nI-y5N" firstAttribute="centerY" secondItem="1oP-EZ-r5F" secondAttribute="centerY" id="wV6-J6-NEC"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -47,7 +39,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="img_auth_background" width="360" height="640"/>
-        <image name="img_logo_login" width="210" height="100"/>
+        <image name="logo-light" width="170" height="41"/>
     </resources>
 </document>

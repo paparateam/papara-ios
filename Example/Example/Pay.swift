@@ -6,14 +6,11 @@
 //  Copyright © 2017 Mobillium. All rights reserved.
 //
 
-import ObjectMapper
 import Alamofire
 
-class Pay: Mappable {
-    
-    let httpMethod = HTTPMethod.post
-    let path = "payments"
-    
+struct Pay: Codable {
+    var httpMethod = "POST"
+    var path = "payments"
     var amount: Double!
     var referenceId = "123456789"
     var orderDescription = "Test payment"
@@ -24,13 +21,7 @@ class Pay: Mappable {
         self.amount = amount
     }
     
-    required init?(map: Map) {}
-    
-    func mapping(map: Map) {
-        amount              <- map["amount"]
-        referenceId         <- map["referenceId"]
-        orderDescription    <- map["orderDescription"]
-        notificationUrl     <- map["notificationUrl"]
-        redirectUrl         <- map["redirectUrl"]
+    var method: HTTPMethod {
+        HTTPMethod(rawValue: httpMethod)
     }
 }
