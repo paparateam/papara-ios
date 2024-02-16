@@ -9,8 +9,8 @@ You can sign up for a Papara account at http://www.papara.com.
 
 ## Requirements
 
-- iOS 9.0+
-- Xcode 8.0+
+- iOS 11.0+
+- Xcode 11.0+
 - Swift 5+
 
 ## Example
